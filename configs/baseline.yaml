@@ -1,0 +1,41 @@
+project:
+  name: baseline
+  seed: 42
+  output_dir: reports/experiments/baseline
+
+data:
+  root: data/raw/Brain_Stroke_CT_Dataset
+  split_path: data/splits/main_split.json
+  generate_split_if_missing: true
+  image_size: 256
+  mask_mode: red
+  num_workers: 2
+  pin_memory: true
+  train_fraction: 0.70
+  val_fraction: 0.15
+  test_fraction: 0.15
+
+model:
+  in_channels: 1
+  out_channels: 1
+  base_channels: 32
+
+loss:
+  bce_weight: 1.0
+  dice_weight: 1.0
+
+train:
+  epochs: 15
+  batch_size: 8
+  learning_rate: 0.0003
+  weight_decay: 0.0001
+  amp: true
+  scheduler_factor: 0.5
+  scheduler_patience: 2
+  early_stopping_patience: 4
+  progress_every: 20
+
+evaluation:
+  threshold: 0.5
+  batch_size: 16
+  num_workers: 2
