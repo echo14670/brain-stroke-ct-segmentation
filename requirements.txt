@@ -4,6 +4,5 @@ numpy
 pandas
 Pillow
 PyYAML
-segmentation-models-pytorch
 torch
 tqdm

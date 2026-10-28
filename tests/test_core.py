@@ -40,9 +40,9 @@ class MaskTest(unittest.TestCase):
             path = Path(directory) / "overlay.png"
             Image.fromarray(pixels, mode="RGB").save(path)
             red = extract_overlay_mask(path, "red")
-            red_blue = extract_overlay_mask(path, "red_blue")
+            with self.assertRaises(ValueError):
+                extract_overlay_mask(path, "unknown")
         self.assertEqual(int(red.sum()), 1)
-        self.assertEqual(int(red_blue.sum()), 2)
 
 
 class SplitTest(unittest.TestCase):

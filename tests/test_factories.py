@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import importlib.util
 import unittest
 from pathlib import Path
 
@@ -31,18 +30,16 @@ class ModelFactoryTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             build_model({"name": "unknown"})
 
-    @unittest.skipUnless(
-        importlib.util.find_spec("segmentation_models_pytorch"),
-        "segmentation-models-pytorch is not installed",
-    )
-    def test_smp_resnet34(self) -> None:
+    def test_custom_model_class_path(self) -> None:
         model = build_model(
             {
-                "name": "smp_unet",
-                "encoder_name": "resnet34",
-                "encoder_weights": None,
-                "in_channels": 1,
-                "out_channels": 1,
+                "name": "custom_unet",
+                "class_path": "src.models.unet:UNet2D",
+                "params": {
+                    "in_channels": 1,
+                    "out_channels": 1,
+                    "base_channels": 4,
+                },
             }
         )
         output = model(torch.zeros(1, 1, 256, 256))
@@ -82,37 +79,14 @@ class LossFactoryTest(unittest.TestCase):
             build_loss({"name": "unknown"})
 
 
-class ExperimentConfigTest(unittest.TestCase):
+class BaselineConfigTest(unittest.TestCase):
     def _load(self, relative_path: str) -> dict[str, object]:
         with (PROJECT_ROOT / relative_path).open("r", encoding="utf-8") as stream:
             return yaml.safe_load(stream)
 
-    def test_e1_changes_mask_only(self) -> None:
-        config = self._load("configs/experiments/E1_data_quality.yaml")
-        self.assertEqual(config["data"]["mask_mode"], "red_blue")
-        self.assertEqual(config["model"]["name"], "unet")
-        self.assertEqual(config["loss"]["name"], "dice_bce")
-
-    def test_e2_changes_encoder_only(self) -> None:
-        config = self._load("configs/experiments/E2_resnet34.yaml")
+    def test_baseline_uses_builtin_modules(self) -> None:
+        config = self._load("configs/baseline.yaml")
         self.assertEqual(config["data"]["mask_mode"], "red")
-        self.assertEqual(config["model"]["name"], "smp_unet")
-        self.assertEqual(config["model"]["encoder_name"], "resnet34")
-        self.assertEqual(config["loss"]["name"], "dice_bce")
-
-    def test_e3_changes_loss_only(self) -> None:
-        config = self._load("configs/experiments/E3_focal_tversky.yaml")
-        self.assertEqual(config["data"]["mask_mode"], "red")
-        self.assertEqual(config["model"]["name"], "unet")
-        self.assertEqual(config["loss"]["name"], "focal_tversky")
-        self.assertEqual(
-            config["loss"]["class_path"],
-            "src.losses.focal_tversky:FocalTverskyLoss",
-        )
-
-    def test_e4_changes_resolution_only(self) -> None:
-        config = self._load("configs/experiments/E4_res320.yaml")
-        self.assertEqual(config["data"]["image_size"], 320)
         self.assertEqual(config["model"]["name"], "unet")
         self.assertEqual(config["loss"]["name"], "dice_bce")
 

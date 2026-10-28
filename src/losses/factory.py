@@ -60,12 +60,7 @@ def build_loss(config: Mapping[str, Any]) -> nn.Module:
             bce_weight=float(config.get("bce_weight", 1.0)),
             dice_weight=float(config.get("dice_weight", 1.0)),
         )
-    if name in {"focal_tversky", "focal_tversky_loss"}:
-        raise ImportError(
-            "loss.name 'focal_tversky' requires an explicit loss.class_path. "
-            "The E3 owner must provide the implementation."
-        )
     raise ValueError(
         f"Unsupported loss.name '{name}'. "
-        "Expected dice_bce, focal_tversky with class_path, or a custom class_path."
+        "Expected dice_bce or a custom loss.class_path."
     )

@@ -228,11 +228,8 @@ def extract_overlay_mask(
         rgb = np.asarray(image.convert("RGB"), dtype=np.int16)
     red, green, blue = rgb[..., 0], rgb[..., 1], rgb[..., 2]
     red_mask = (red >= 80) & ((red - green) >= 20) & ((red - blue) >= 20)
-    blue_mask = (blue >= 80) & ((blue - red) >= 20) & ((blue - green) >= 20)
     if mask_mode == "red":
         mask = red_mask
-    elif mask_mode == "red_blue":
-        mask = red_mask | blue_mask
     else:
         raise ValueError(f"Unsupported mask_mode: {mask_mode}")
     return mask.astype(np.uint8)
