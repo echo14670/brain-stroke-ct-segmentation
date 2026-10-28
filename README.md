@@ -63,10 +63,11 @@
 
 当前 `data/splits/main_split.json` 是基线负责人生成的 provisional 固定切分，训练集 4654 例、验证集 998 例、内部测试集 998 例、External_Test 200 例。正式实验前必须由数据负责人用冻结版 `main_split.json` 替换，并重新运行基线。
 
-Kaggle 云端入口位于 `kaggle/`，使用 Kaggle CLI 推送和查看状态，不依赖 SSH：
+Kaggle 云端入口位于 `kaggle/`。Notebook 会把嵌入的源码包解压到 `/kaggle/working`，因此云端运行时不需要访问 GitHub；使用 Kaggle CLI 推送和查看状态：
 
 ```powershell
 kaggle kernels push -p kaggle
 kaggle kernels status echo14aa/brain-stroke-baseline
 kaggle kernels output echo14aa/brain-stroke-baseline -p outputs/kaggle-baseline
 ```
+
