@@ -7,7 +7,7 @@ from pathlib import Path
 import torch
 import yaml
 
-from src.losses import DiceBCELoss, FocalTverskyLoss, build_loss
+from src.losses import DiceBCELoss, build_loss
 from src.models import build_model
 
 
@@ -61,16 +61,18 @@ class LossFactoryTest(unittest.TestCase):
         self.assertIsInstance(loss, DiceBCELoss)
         self.assertTrue(torch.isfinite(loss(self.logits, self.targets)))
 
-    def test_focal_tversky(self) -> None:
+    def test_custom_loss_class_path(self) -> None:
         loss = build_loss(
             {
-                "name": "focal_tversky",
-                "alpha": 0.7,
-                "beta": 0.3,
-                "gamma": 0.75,
+                "name": "custom_dice_bce",
+                "class_path": "src.losses.dice_bce:DiceBCELoss",
+                "params": {
+                    "bce_weight": 1.0,
+                    "dice_weight": 1.0,
+                },
             }
         )
-        self.assertIsInstance(loss, FocalTverskyLoss)
+        self.assertIsInstance(loss, DiceBCELoss)
         value = loss(self.logits, self.targets)
         value.backward()
         self.assertTrue(torch.isfinite(value))
@@ -103,6 +105,10 @@ class ExperimentConfigTest(unittest.TestCase):
         self.assertEqual(config["data"]["mask_mode"], "red")
         self.assertEqual(config["model"]["name"], "unet")
         self.assertEqual(config["loss"]["name"], "focal_tversky")
+        self.assertEqual(
+            config["loss"]["class_path"],
+            "src.losses.focal_tversky:FocalTverskyLoss",
+        )
 
     def test_e4_changes_resolution_only(self) -> None:
         config = self._load("configs/experiments/E4_res320.yaml")
