@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import shutil
 import sys
 import time
@@ -118,6 +119,8 @@ def train(
     write_json(output_dir / "split_snapshot.json", split_payload)
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    if os.environ.get("REQUIRE_CUDA") == "1" and device.type != "cuda":
+        raise RuntimeError("REQUIRE_CUDA=1 but CUDA is not available")
     image_size = int(data_config["image_size"])
     mask_mode = str(data_config["mask_mode"])
     train_dataset = dataset_for_split(

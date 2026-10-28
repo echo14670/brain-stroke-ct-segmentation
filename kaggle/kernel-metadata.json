@@ -8,8 +8,11 @@
   "enable_gpu": true,
   "enable_tpu": false,
   "enable_internet": false,
+  "machine_shape": "NvidiaTeslaT4",
   "dataset_sources": [
-    "ozguraslank/brain-stroke-ct-dataset"
+    "ozguraslank/brain-stroke-ct-dataset",
+    "amitmalakarjoy/torch-2100-cu128",
+    "koumeimaki/vllm019-cp311-cu128-wheelhouse"
   ],
   "competition_sources": [],
   "kernel_sources": []

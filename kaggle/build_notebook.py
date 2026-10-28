@@ -61,6 +61,72 @@ data_root = candidates[0]
 os.environ['BSC_DATA_ROOT'] = str(data_root)
 os.environ['PYTHONUNBUFFERED'] = '1'
 os.environ['MPLBACKEND'] = 'Agg'
+os.environ['REQUIRE_CUDA'] = '1'
+import torch
+print('torch:', torch.__version__)
+print('torch_cuda:', torch.version.cuda)
+print('cuda_device_count:', torch.cuda.device_count())
+print('cuda_available:', torch.cuda.is_available())
+print('CUDA_VISIBLE_DEVICES:', os.environ.get('CUDA_VISIBLE_DEVICES'))
+try:
+    nvidia_output = subprocess.run(
+        ['nvidia-smi'], check=False, capture_output=True, text=True, timeout=15
+    )
+    print('nvidia-smi rc:', nvidia_output.returncode)
+    print(nvidia_output.stdout)
+    print(nvidia_output.stderr)
+except Exception as error:
+    print('nvidia-smi error:', repr(error))
+device_nodes = sorted(str(path) for path in Path('/dev').glob('nvidia*'))
+print('nvidia device nodes:', device_nodes)
+if not device_nodes and shutil.which('nvidia-smi') is None:
+    raise RuntimeError(
+        'No NVIDIA device was attached to this session; refusing CPU fallback'
+    )
+
+wheel_candidates = sorted(Path('/kaggle/input').rglob('torch-*cu128*.whl'))
+if not wheel_candidates:
+    raise FileNotFoundError('The offline CUDA PyTorch wheel was not mounted')
+torch_wheel = wheel_candidates[0]
+print('torch wheel:', torch_wheel)
+valid_name = torch_wheel.name.replace('2.10.0cu128', '2.10.0+cu128')
+valid_wheel = repo.parent / valid_name
+shutil.copy2(torch_wheel, valid_wheel)
+print('normalized wheel:', valid_wheel)
+
+nvidia_wheels = sorted(
+    path
+    for path in Path('/kaggle/input').rglob('nvidia_*.whl')
+    if 'cu12' in path.name and '-py3-none-' in path.name
+)
+if not nvidia_wheels:
+    raise FileNotFoundError(
+        'Offline CUDA 12 NVIDIA dependency wheels were not mounted'
+    )
+print('nvidia wheels:', len(nvidia_wheels))
+subprocess.run(
+    [
+        sys.executable, '-m', 'pip', 'install', '--no-deps',
+        *[str(path) for path in nvidia_wheels],
+    ],
+    check=True,
+)
+subprocess.run(
+    [
+        sys.executable, '-m', 'pip', 'install', '--no-deps',
+        '--force-reinstall', str(valid_wheel),
+    ],
+    check=True,
+)
+subprocess.run(
+    [
+        sys.executable, '-c',
+        'import torch; print("installed torch:", torch.__version__); '
+        'print("installed cuda:", torch.version.cuda); '
+        'print("installed cuda available:", torch.cuda.is_available())',
+    ],
+    check=True,
+)
 print('repository:', repo)
 print('dataset:', data_root)
 print('python:', sys.version)
