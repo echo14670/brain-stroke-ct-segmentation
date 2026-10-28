@@ -1,0 +1,8 @@
+kaggle
+matplotlib
+numpy
+pandas
+Pillow
+PyYAML
+torch
+tqdm

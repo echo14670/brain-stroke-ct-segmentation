@@ -50,3 +50,23 @@
 ## 期末交付提醒
 
 课程材料要求提交汇报 PPT、每人独立项目报告、代码与模型，并在汇报中包含项目背景、方法、定量结果、结论和团队分工。
+## 基线代码
+
+- 配置：`configs/baseline.yaml`
+- 训练：`python scripts/train.py --config configs/baseline.yaml`
+- 评估：`python scripts/evaluate.py --config configs/baseline.yaml`
+- 外部测试推理：`python scripts/infer.py --config configs/baseline.yaml`
+- 基线实现：从零训练的简单 2D U-Net、256x256 单通道灰度、Dice+BCE、统一阈值 0.5。
+- 数据读取：Normal 使用全零掩码；Bleeding 和 Ischemia 从 OVERLAY 提取红色前景；External_Test 使用官方 MASKS。
+- 训练进度：控制台显示 tqdm 进度条，同时写入 `reports/experiments/baseline/run.log` 和 `reports/experiments/baseline/progress.json`。
+- 运行结果：`metrics.json`、`summary.md`、`curves.png`、`test_per_case.csv`、`external_test_per_case.csv` 和外部测试预测掩码。
+
+当前 `data/splits/main_split.json` 是基线负责人生成的 provisional 固定切分，训练集 4654 例、验证集 998 例、内部测试集 998 例、External_Test 200 例。正式实验前必须由数据负责人用冻结版 `main_split.json` 替换，并重新运行基线。
+
+Kaggle 云端入口位于 `kaggle/`，使用 Kaggle CLI 推送和查看状态，不依赖 SSH：
+
+```powershell
+kaggle kernels push -p kaggle
+kaggle kernels status echo14aa/brain-stroke-baseline
+kaggle kernels output echo14aa/brain-stroke-baseline -p outputs/kaggle-baseline
+```

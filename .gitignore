@@ -3,3 +3,8 @@ __pycache__/
 *.py[cod]
 .venv/
 .ipynb_checkpoints/
+runs/
+outputs/
+checkpoints/
+*.pth
+*.ckpt
