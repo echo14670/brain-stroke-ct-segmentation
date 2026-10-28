@@ -1,7 +1,7 @@
 {
-  "version": "baseline-provisional-v1-seed42",
-  "provisional": true,
-  "owner_note": "Temporary baseline split. Replace with the data owner's frozen main_split.json before formal comparison experiments.",
+  "version": "baseline-v1-seed42",
+  "provisional": false,
+  "owner_note": "Frozen control split accepted by the team on 2026-10-28. Case membership is unchanged from the run that produced the baseline-v1 metrics.",
   "seed": 42,
   "fractions": {
     "train": 0.7,
@@ -27423,5 +27423,8 @@
       "image_id": "17023",
       "group": "External_Test"
     }
-  ]
+  ],
+  "frozen_at": "2026-10-28",
+  "accepted_for": "baseline-v1",
+  "membership_sha256": "db54033f24204e97faae21e80e15c8104ecb783f9feab5b3c894debf6f62f58c"
 }

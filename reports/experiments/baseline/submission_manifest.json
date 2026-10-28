@@ -1,0 +1,25 @@
+{
+  "基线标签": "baseline-v1",
+  "状态": "已完成",
+  "Kaggle内核": "echo14aa/brain-stroke-baseline",
+  "Kaggle版本": 11,
+  "运行地址": "https://www.kaggle.com/code/echo14aa/brain-stroke-baseline",
+  "最佳验证Dice": 0.3324415020580968,
+  "完成Epoch数": 8,
+  "数据切分": {
+    "冻结版本": "baseline-v1-seed42",
+    "运行记录版本": "baseline-provisional-v1-seed42",
+    "病例成员是否变化": false,
+    "成员哈希": "db54033f24204e97faae21e80e15c8104ecb783f9feab5b3c894debf6f62f58c"
+  },
+  "模型权重": "GitHub Release baseline-v1 中的 best.pt",
+  "实验分支": [
+    "E1 数据质量修正",
+    "E2 预训练 ResNet34",
+    "E3 Focal Tversky Loss",
+    "E4 320×320 输入"
+  ],
+  "模型权重文件": "best.pt",
+  "模型权重大小字节": 31126149,
+  "模型权重SHA256": "6D6283CF77EF155A9B9B50752CBA5A318F6AE749064EC2A19FD262459CA07911"
+}

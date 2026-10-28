@@ -1,0 +1,92 @@
+{
+  "experiment": "baseline",
+  "checkpoint": "/kaggle/working/brain-stroke-ct-segmentation/reports/experiments/baseline/best.pt",
+  "checkpoint_epoch": 4,
+  "split_version": "baseline-provisional-v1-seed42",
+  "split_provisional": true,
+  "threshold": 0.5,
+  "internal_test": {
+    "overall": {
+      "case_count": 998,
+      "positive_case_count": 334,
+      "normal_case_count": 664,
+      "positive_mean_dice": 0.3015588904727766,
+      "positive_mean_iou": 0.24027054019007169,
+      "positive_pixel_precision": 0.5234842390111899,
+      "positive_pixel_recall": 0.22386458532069345,
+      "normal_false_positive_pixel_ratio": 0.002108907125082361
+    },
+    "groups": {
+      "Bleeding": {
+        "case_count": 164,
+        "positive_case_count": 164,
+        "normal_case_count": 0,
+        "positive_mean_dice": 0.6124929729029263,
+        "positive_mean_iou": 0.48848745270751365,
+        "positive_pixel_precision": 0.594641992216859,
+        "positive_pixel_recall": 0.7899664958175242,
+        "normal_false_positive_pixel_ratio": 0.0
+      },
+      "Ischemia": {
+        "case_count": 170,
+        "positive_case_count": 170,
+        "normal_case_count": 0,
+        "positive_mean_dice": 0.0015989521283969648,
+        "positive_mean_iou": 0.0008142245850100192,
+        "positive_pixel_precision": 0.021785209609043805,
+        "positive_pixel_recall": 0.0016115614288016516,
+        "normal_false_positive_pixel_ratio": 0.0
+      },
+      "Normal": {
+        "case_count": 664,
+        "positive_case_count": 0,
+        "normal_case_count": 664,
+        "positive_mean_dice": 0.0,
+        "positive_mean_iou": 0.0,
+        "positive_pixel_precision": 0.0,
+        "positive_pixel_recall": 0.0,
+        "normal_false_positive_pixel_ratio": 0.002108907125082361
+      }
+    },
+    "image_detection": {
+      "tp": 284,
+      "fp": 408,
+      "fn": 50,
+      "tn": 256,
+      "precision": 0.41040462427745666,
+      "recall": 0.8502994011976048,
+      "f1": 0.5536062378167642
+    }
+  },
+  "external_test": {
+    "overall_segmentation": {
+      "case_count": 200,
+      "positive_case_count": 63,
+      "normal_case_count": 0,
+      "positive_mean_dice": 0.403150335131589,
+      "positive_mean_iou": 0.3419630246826995,
+      "positive_pixel_precision": 0.580025831675219,
+      "positive_pixel_recall": 0.3303248379786092,
+      "normal_false_positive_pixel_ratio": 0.0
+    },
+    "image_detection": {
+      "tp": 58,
+      "fp": 84,
+      "fn": 12,
+      "tn": 46,
+      "precision": 0.4084507042253521,
+      "recall": 0.8285714285714286,
+      "f1": 0.5471698113207547
+    }
+  },
+  "combined_segmentation": {
+    "case_count": 1198,
+    "positive_case_count": 397,
+    "normal_case_count": 664,
+    "positive_mean_dice": 0.31768045473853274,
+    "positive_mean_iou": 0.25640813848487165,
+    "positive_pixel_precision": 0.5332785091034424,
+    "positive_pixel_recall": 0.23833678799884334,
+    "normal_false_positive_pixel_ratio": 0.002108907125082361
+  }
+}

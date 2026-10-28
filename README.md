@@ -70,4 +70,8 @@ kaggle kernels push -p kaggle
 kaggle kernels status echo14aa/brain-stroke-baseline
 kaggle kernels output echo14aa/brain-stroke-baseline -p outputs/kaggle-baseline
 ```
+## 当前正式基线
 
+`baseline-v1` 已完成 Kaggle GPU 训练，定义为基础红色掩码、无数据增强、简单 2D U-Net、256×256、Dice+BCE、从零训练。结果和逐病例记录位于 `reports/experiments/baseline/`，模型权重通过 GitHub Release `baseline-v1` 交付。
+
+E1 数据质量修正、E2 预训练 ResNet34、E3 Focal Tversky Loss 和 E4 320×320 输入均可从 `baseline-v1` 并行开始；任何实验都不得覆盖该控制组结果。
