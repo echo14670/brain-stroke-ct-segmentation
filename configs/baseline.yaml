@@ -16,11 +16,13 @@ data:
   test_fraction: 0.15
 
 model:
+  name: unet
   in_channels: 1
   out_channels: 1
   base_channels: 32
 
 loss:
+  name: dice_bce
   bce_weight: 1.0
   dice_weight: 1.0
 

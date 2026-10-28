@@ -4,6 +4,7 @@ import base64
 import io
 import json
 import tarfile
+import argparse
 from pathlib import Path
 
 
@@ -30,7 +31,7 @@ def _archive_sources() -> str:
     return base64.b64encode(stream.getvalue()).decode("ascii")
 
 
-def build_notebook() -> dict[str, object]:
+def build_notebook(config_path: str = "configs/baseline.yaml") -> dict[str, object]:
     payload = _archive_sources()
     setup = f"""
 from pathlib import Path
@@ -62,6 +63,7 @@ os.environ['BSC_DATA_ROOT'] = str(data_root)
 os.environ['PYTHONUNBUFFERED'] = '1'
 os.environ['MPLBACKEND'] = 'Agg'
 os.environ['REQUIRE_CUDA'] = '1'
+config_path = os.environ.get('BSC_CONFIG', {config_path!r})
 import torch
 print('torch:', torch.__version__)
 print('torch_cuda:', torch.version.cuda)
@@ -129,11 +131,12 @@ subprocess.run(
 )
 print('repository:', repo)
 print('dataset:', data_root)
+print('config:', config_path)
 print('python:', sys.version)
 """
     train = """
 subprocess.run(
-    [sys.executable, 'scripts/train.py', '--config', 'configs/baseline.yaml'],
+    [sys.executable, 'scripts/train.py', '--config', config_path],
     cwd=repo,
     check=True,
     env=os.environ.copy(),
@@ -141,22 +144,25 @@ subprocess.run(
 """
     evaluate = """
 subprocess.run(
-    [sys.executable, 'scripts/evaluate.py', '--config', 'configs/baseline.yaml'],
+    [sys.executable, 'scripts/evaluate.py', '--config', config_path],
     cwd=repo,
     check=True,
     env=os.environ.copy(),
 )
 subprocess.run(
-    [sys.executable, 'scripts/infer.py', '--config', 'configs/baseline.yaml'],
+    [sys.executable, 'scripts/infer.py', '--config', config_path],
     cwd=repo,
     check=True,
     env=os.environ.copy(),
 )
 """
     finish = """
-results = repo / 'reports' / 'experiments' / 'baseline'
+import yaml
+config_data = yaml.safe_load((repo / config_path).read_text(encoding='utf-8'))
+results = repo / config_data['project']['output_dir']
 print((results / 'summary.md').read_text(encoding='utf-8'))
-(Path('/kaggle/working') / 'BASELINE_RUN_COMPLETE').write_text('complete\\n', encoding='utf-8')
+marker = Path('/kaggle/working') / f"{config_data['project']['name']}_RUN_COMPLETE"
+marker.write_text('complete\\n', encoding='utf-8')
 print('result directory:', results)
 """
     return {
@@ -167,7 +173,7 @@ print('result directory:', results)
                 "metadata": {},
                 "source": _source(
                     """
-# Brain Stroke CT Baseline
+# Brain Stroke CT Experiment
 
 The notebook is self-contained: it extracts the embedded source bundle into
 `/kaggle/working`, then runs training, evaluation, and external inference.
@@ -224,7 +230,10 @@ Progress appears live in the training cell and is persisted in `run.log` and
 
 
 def main() -> None:
-    notebook = build_notebook()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--config", default="configs/baseline.yaml")
+    args = parser.parse_args()
+    notebook = build_notebook(args.config)
     NOTEBOOK_PATH.write_text(
         json.dumps(notebook, ensure_ascii=False, indent=1) + "\n",
         encoding="utf-8",

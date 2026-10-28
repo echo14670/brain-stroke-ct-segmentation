@@ -15,7 +15,7 @@ sys.path.insert(0, str(PROJECT_ROOT))
 
 from src.data import dataset_for_split, ensure_split  # noqa: E402
 from src.evaluation.metrics import detection_metrics  # noqa: E402
-from src.models import UNet2D  # noqa: E402
+from src.models import build_model  # noqa: E402
 from src.utils import (  # noqa: E402
     load_config,
     resolve_data_root,
@@ -70,11 +70,7 @@ def infer(config_path: Path, checkpoint_path: Path | None) -> None:
     )
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    model = UNet2D(
-        in_channels=int(config["model"]["in_channels"]),
-        out_channels=int(config["model"]["out_channels"]),
-        base_channels=int(config["model"]["base_channels"]),
-    ).to(device)
+    model = build_model(config["model"], pretrained=False).to(device)
     checkpoint = torch.load(
         checkpoint_path, map_location=device, weights_only=False
     )
