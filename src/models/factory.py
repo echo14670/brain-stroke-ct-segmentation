@@ -66,7 +66,23 @@ def build_model(
             base_channels=int(config.get("base_channels", 32)),
         )
 
+    if name in {"smp_unet", "smp-unet"}:
+        from src.models.smp_unet import SMPUnet
+
+        encoder_weights = (
+            str(config.get("encoder_weights", "imagenet"))
+            if pretrained
+            else None
+        )
+        return SMPUnet(
+            encoder_name=str(config.get("encoder_name", "resnet34")),
+            encoder_weights=encoder_weights,
+            in_channels=in_channels,
+            classes=int(config.get("classes", out_channels)),
+            encoder_depth=int(config.get("encoder_depth", 5)),
+        )
+
     raise ValueError(
         f"Unsupported model.name '{name}'. "
-        "Expected unet, unet2d, or a custom model.class_path."
+        "Expected unet, unet2d, smp_unet, or a custom model.class_path."
     )
