@@ -1,0 +1,94 @@
+{
+  "experiment": "E4 320×320 输入分辨率",
+  "status": "训练、统一评估与外部推理已完成，结果已归档到 reports/experiments/E4_res320/",
+  "branch": "exp/res320",
+  "selected_config": "configs/experiments/E4_res320.yaml",
+  "notebook": "kaggle/E4_res320/E4_res320_full.ipynb",
+  "kernel": "wtbcdj/brain-stroke-e4-res320",
+  "run_id": "brain-stroke-e4-eead0335ac7e",
+  "selected_checkpoint_epoch": 5,
+  "best_validation_dice": 0.4107806476929272,
+  "checkpoint_delivery": "brain-stroke-e4-eead0335ac7e-e4-results.zip",
+  "checkpoint_bytes": 31126213,
+  "external_prediction_masks": 200,
+  "split_version": "baseline-v1-seed42",
+  "split_file_sha256": "4853e4fe55dac627ae4a5daba918aa00f46feb156932e909cbce5802742a7052",
+  "split_membership_sha256": "db54033f24204e97faae21e80e15c8104ecb783f9feab5b3c894debf6f62f58c",
+  "seed": 42,
+  "threshold": 0.5,
+  "image_size": 320,
+  "baseline_image_size": 256,
+  "parameter_count": 7765409,
+  "environment": {
+    "python": "3.13.15",
+    "torch": "2.10.0+cu128",
+    "cuda": "12.8",
+    "cudnn": 91002,
+    "gpu": "Tesla T4"
+  },
+  "single_variable_check": {
+    "model": "unet / base_channels 32（与基线相同）",
+    "loss": "dice_bce（与基线相同）",
+    "train": "batch 8 / lr 3e-4 / 15 epoch / 早停 4 / AMP（与基线相同）",
+    "evaluation": "threshold 0.5 / batch 16（与基线相同）",
+    "changed": "data.image_size 256 -> 320"
+  },
+  "peak_memory": {
+    "train_batch8_allocated_gib": 1.2,
+    "train_batch8_reserved_gib": 1.62,
+    "eval_batch16_allocated_gib": 1.07,
+    "gpu_total_gib": 14.56
+  },
+  "checks": {
+    "cloud_tests": "23 PASS",
+    "cuda_320_smoke": "PASS",
+    "frozen_split_sha256": "PASS",
+    "single_variable_assert": "PASS",
+    "wheel_sha256_against_official_index": "PASS (torch + 15 nvidia wheels)",
+    "checkpoint_loaded_by_evaluate": "PASS (epoch=5)",
+    "latency_benchmark": "PASS（T4：纯前向 320×320 5.872 ms/图 @batch1、4.883 @batch16；256×256 3.608/3.141；端到端 242.672 ms/图）"
+  },
+  "latency": {
+    "gpu": "Tesla T4",
+    "torch": "2.10.0+cu128",
+    "amp": true,
+    "weights": "best.pt (epoch 5, 来自数据集 wtbcdj/best01)",
+    "forward_only_ms_per_image": {"320_batch1": 5.872, "320_batch16": 4.883, "256_batch1": 3.608, "256_batch16": 3.141},
+    "end_to_end_ms_per_image": {"320_batch1": 242.672, "samples": 30},
+    "resolution_cost_ratio": {"batch1": 1.627, "batch16": 1.554, "pixel_ratio": 1.5625}
+  },
+  "deliverables": [
+    "config.yaml",
+    "evaluation_config.yaml",
+    "metrics.json",
+    "summary.md",
+    "evaluate_output.md",
+    "train_summary.json",
+    "progress.json",
+    "run.log",
+    "curves.png",
+    "test_per_case.csv",
+    "external_test_per_case.csv",
+    "inference_summary.json",
+    "lesion_stratified.json",
+    "samples.png",
+    "samples_index.json",
+    "latency_benchmark.json",
+    "environment.json",
+    "split_snapshot.json",
+    "e4_tests.log",
+    "e4_cuda_smoke.log"
+  ],
+  "excluded_from_git": [
+    "best.pt",
+    "last.pt",
+    "predictions/external/*.png"
+  ],
+  "limitations": [
+    "单一的固定种子（42）",
+    "端到端推理延迟为单进程 num_workers=0 的上界口径",
+    "验证集 Dice 在第 6-8 轮塌缩为 0，最佳轮次选择对随机性敏感",
+    "提升集中在中大型病灶，最小分箱反而略降，不能宣称改善小病灶",
+    "Normal 假阳性像素比例上升到基线的 1.67 倍"
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "quantile_bins": [
+    {
+      "bin": 1,
+      "n": 67,
+      "gt_frac_range": [
+        0,
+        0.003036
+      ],
+      "baseline_dice": 0.3735,
+      "e4_dice": 0.3468,
+      "baseline_recall": 0.5848,
+      "e4_recall": 0.5691,
+      "delta_dice": -0.0267,
+      "delta_recall": -0.0157
+    },
+    {
+      "bin": 2,
+      "n": 67,
+      "gt_frac_range": [
+        0.003036,
+        0.006409
+      ],
+      "baseline_dice": 0.376,
+      "e4_dice": 0.4244,
+      "baseline_recall": 0.4448,
+      "e4_recall": 0.5211,
+      "delta_dice": 0.0484,
+      "delta_recall": 0.0763
+    },
+    {
+      "bin": 3,
+      "n": 67,
+      "gt_frac_range": [
+        0.006409,
+        0.011383
+      ],
+      "baseline_dice": 0.3296,
+      "e4_dice": 0.3912,
+      "baseline_recall": 0.4034,
+      "e4_recall": 0.4764,
+      "delta_dice": 0.0616,
+      "delta_recall": 0.073
+    },
+    {
+      "bin": 4,
+      "n": 67,
+      "gt_frac_range": [
+        0.011383,
+        0.026352
+      ],
+      "baseline_dice": 0.3106,
+      "e4_dice": 0.5128,
+      "baseline_recall": 0.3469,
+      "e4_recall": 0.5552,
+      "delta_dice": 0.2022,
+      "delta_recall": 0.2083
+    },
+    {
+      "bin": 5,
+      "n": 66,
+      "gt_frac_range": [
+        0.026352,
+        null
+      ],
+      "baseline_dice": 0.1153,
+      "e4_dice": 0.3994,
+      "baseline_recall": 0.114,
+      "e4_recall": 0.3556,
+      "delta_dice": 0.2841,
+      "delta_recall": 0.2416
+    }
+  ],
+  "small_lesion_thresholds": {
+    "0.001": {
+      "n": 19,
+      "baseline_dice": 0.3907,
+      "e4_dice": 0.3465,
+      "baseline_recall": 0.6687,
+      "e4_recall": 0.5853
+    },
+    "0.005": {
+      "n": 115,
+      "baseline_dice": 0.3928,
+      "e4_dice": 0.3819,
+      "baseline_recall": 0.5453,
+      "e4_recall": 0.5513
+    },
+    "0.01": {
+      "n": 184,
+      "baseline_dice": 0.3712,
+      "e4_dice": 0.3893,
+      "baseline_recall": 0.4944,
+      "e4_recall": 0.5328
+    }
+  },
+  "groups": {
+    "Bleeding": {
+      "n": 164,
+      "baseline_dice": 0.6125,
+      "e4_dice": 0.5895,
+      "baseline_recall": 0.772,
+      "e4_recall": 0.7704
+    },
+    "Ischemia": {
+      "n": 170,
+      "baseline_dice": 0.0016,
+      "e4_dice": 0.2465,
+      "baseline_recall": 0.001,
+      "e4_recall": 0.2311
+    }
+  }
+}
