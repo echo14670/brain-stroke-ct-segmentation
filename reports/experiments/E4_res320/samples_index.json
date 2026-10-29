@@ -1,0 +1,112 @@
+{
+  "experiment": "E4_res320",
+  "tag": "E4_res320（320×320）",
+  "legend": "红=GT 掩码，绿=模型预测，黄=重叠；数据来源 External_Test（官方 MASKS）",
+  "cells": [
+    {
+      "tag": "成功",
+      "image_id": "14343",
+      "dice": 0.9704,
+      "recall": 0.9525,
+      "precision": 0.989,
+      "gt_pixels": 2841,
+      "predicted_pixels": 2736,
+      "pixels": 102400,
+      "lines": [
+        "成功 Dice 0.970",
+        "R 0.953  P 0.989",
+        "GT 2841 px → 预测 2736 px"
+      ]
+    },
+    {
+      "tag": "成功",
+      "image_id": "11479",
+      "dice": 0.9617,
+      "recall": 0.9326,
+      "precision": 0.9926,
+      "gt_pixels": 861,
+      "predicted_pixels": 809,
+      "pixels": 102400,
+      "lines": [
+        "成功 Dice 0.962",
+        "R 0.933  P 0.993",
+        "GT 861 px → 预测 809 px"
+      ]
+    },
+    {
+      "tag": "失败-漏检",
+      "image_id": "11074",
+      "dice": 0.0,
+      "recall": 0.0,
+      "precision": 0.0,
+      "gt_pixels": 643,
+      "predicted_pixels": 468,
+      "pixels": 102400,
+      "lines": [
+        "失败-漏检",
+        "Dice 0.000",
+        "病灶 643 px 完全未检出"
+      ]
+    },
+    {
+      "tag": "失败-低Dice",
+      "image_id": "10437",
+      "dice": 0.3124,
+      "recall": 0.8468,
+      "precision": 0.1915,
+      "gt_pixels": 901,
+      "predicted_pixels": 3984,
+      "pixels": 102400,
+      "lines": [
+        "失败-低Dice Dice 0.312",
+        "R 0.847  P 0.192",
+        "GT 901 px → 预测 3984 px"
+      ]
+    },
+    {
+      "tag": "失败-低Dice",
+      "image_id": "15948",
+      "dice": 0.2944,
+      "recall": 0.1911,
+      "precision": 0.6408,
+      "gt_pixels": 1036,
+      "predicted_pixels": 309,
+      "pixels": 102400,
+      "lines": [
+        "失败-低Dice Dice 0.294",
+        "R 0.191  P 0.641",
+        "GT 1036 px → 预测 309 px"
+      ]
+    },
+    {
+      "tag": "假阳性",
+      "image_id": "10910",
+      "dice": 0.0,
+      "recall": 1.0,
+      "precision": 0.0,
+      "gt_pixels": 0,
+      "predicted_pixels": 4959,
+      "pixels": 102400,
+      "lines": [
+        "假阳性",
+        "GT 0 px",
+        "误报 4959 px（4.8%）"
+      ]
+    },
+    {
+      "tag": "假阳性",
+      "image_id": "15967",
+      "dice": 0.0,
+      "recall": 1.0,
+      "precision": 0.0,
+      "gt_pixels": 0,
+      "predicted_pixels": 4392,
+      "pixels": 102400,
+      "lines": [
+        "假阳性",
+        "GT 0 px",
+        "误报 4392 px（4.3%）"
+      ]
+    }
+  ]
+}

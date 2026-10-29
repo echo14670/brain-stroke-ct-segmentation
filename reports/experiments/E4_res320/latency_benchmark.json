@@ -1,0 +1,49 @@
+{
+  "experiment": "E4_res320",
+  "gpu": "Tesla T4",
+  "torch": "2.10.0+cu128",
+  "amp": true,
+  "weights": {
+    "source": "best.pt",
+    "path": "/kaggle/input/datasets/wtbcdj/best01/best.pt",
+    "checkpoint_epoch": 5
+  },
+  "note": "forward_only 不含 PNG 解码与 resize；end_to_end 为该机的实测上限口径",
+  "measurements": [
+    {
+      "kind": "forward_only",
+      "image_size": 320,
+      "batch": 1,
+      "ms_per_image": 5.872,
+      "images_per_second": 170.31
+    },
+    {
+      "kind": "forward_only",
+      "image_size": 320,
+      "batch": 16,
+      "ms_per_image": 4.883,
+      "images_per_second": 204.8
+    },
+    {
+      "kind": "forward_only",
+      "image_size": 256,
+      "batch": 1,
+      "ms_per_image": 3.608,
+      "images_per_second": 277.13
+    },
+    {
+      "kind": "forward_only",
+      "image_size": 256,
+      "batch": 16,
+      "ms_per_image": 3.141,
+      "images_per_second": 318.37
+    },
+    {
+      "kind": "end_to_end_decode_resize_forward",
+      "image_size": 320,
+      "batch": 1,
+      "samples": 30,
+      "ms_per_image": 242.672
+    }
+  ]
+}
