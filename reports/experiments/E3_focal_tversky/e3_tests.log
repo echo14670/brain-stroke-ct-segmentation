@@ -1,0 +1,28 @@
+test_overlay_colors (test_core.MaskTest.test_overlay_colors) ... ok
+test_binary_metrics (test_core.MetricsTest.test_binary_metrics) ... ok
+test_detection_metrics (test_core.MetricsTest.test_detection_metrics) ... ok
+test_provisional_split_coverage (test_core.SplitTest.test_provisional_split_coverage) ... ok
+test_baseline_uses_builtin_modules (test_factories.BaselineConfigTest.test_baseline_uses_builtin_modules) ... ok
+test_custom_loss_class_path (test_factories.LossFactoryTest.test_custom_loss_class_path) ... ok
+test_dice_bce (test_factories.LossFactoryTest.test_dice_bce) ... ok
+test_unknown_loss_is_rejected (test_factories.LossFactoryTest.test_unknown_loss_is_rejected) ... ok
+test_custom_model_class_path (test_factories.ModelFactoryTest.test_custom_model_class_path) ... ok
+test_custom_unet_accepts_320_input (test_factories.ModelFactoryTest.test_custom_unet_accepts_320_input) ... ok
+test_unknown_model_is_rejected (test_factories.ModelFactoryTest.test_unknown_model_is_rejected) ... ok
+test_batch_gradient_with_empty_and_small_lesion_images (test_focal_tversky.FocalTverskyTest.test_batch_gradient_with_empty_and_small_lesion_images) ... ok
+test_batch_hand_calculation_and_factory (test_focal_tversky.FocalTverskyTest.test_batch_hand_calculation_and_factory) ... ok
+test_batch_numerical_gradient_and_single_image (test_focal_tversky.FocalTverskyTest.test_batch_numerical_gradient_and_single_image) ... ok
+test_false_negatives_have_greater_penalty (test_focal_tversky.FocalTverskyTest.test_false_negatives_have_greater_penalty) ... ok
+test_hand_calculated_value (test_focal_tversky.FocalTverskyTest.test_hand_calculated_value) ... ok
+test_invalid_shape_and_parameters (test_focal_tversky.FocalTverskyTest.test_invalid_shape_and_parameters) ... ok
+test_mixed_batch_half_precision_at_training_resolution (test_focal_tversky.FocalTverskyTest.test_mixed_batch_half_precision_at_training_resolution) ... ok
+test_new_factory_interface (test_focal_tversky.FocalTverskyTest.test_new_factory_interface) ... ok
+test_normal_case_gradient_suppresses_false_positives (test_focal_tversky.FocalTverskyTest.test_normal_case_gradient_suppresses_false_positives) ... ok
+test_numerical_gradient (test_focal_tversky.FocalTverskyTest.test_numerical_gradient) ... ok
+test_per_image_reduction (test_focal_tversky.FocalTverskyTest.test_per_image_reduction) ... ok
+test_saturated_predictions_have_finite_gradients (test_focal_tversky.FocalTverskyTest.test_saturated_predictions_have_finite_gradients) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 2.791s
+
+OK
