@@ -11,7 +11,7 @@
 | 2 | 输入尺寸 256×256 → 320×320，图像与掩码同步缩放 | `configs/experiments/E4_res320.yaml`（`data.image_size: 320`）；`src/data/dataset.py` 图像 BILINEAR、掩码 NEAREST 同一原图缩放 | ✅ 云端断言 `(1,320,320)` 通过 |
 | 3 | 相同 batch size；显存不足用 AMP/梯度累积，不改有效 batch | `train.batch_size: 8`、`train.amp: true` 与基线一致；实测 batch 8 仅占 1.62/14.56 GiB，无需累积 | ✅ |
 | 4 | 比较阳性 Dice、小病灶 Recall、推理时间、显存、Normal 假阳性 | `metrics.json`、`lesion_stratified.json`、`latency_benchmark.json`、`e4_cuda_smoke.log`、`summary.md` | ✅ |
-| 5 | 提交配置、训练日志、指标和结论 | `reports/experiments/E4_res320/`（22 项） | ✅ |
+| 5 | 提交配置、训练日志、指标和结论 | `reports/experiments/E4_res320/`（23 项） | ✅ |
 | 交付 1 | `E4_res320.yaml` 和必要的预处理调整 | `configs/experiments/E4_res320.yaml`（无需改预处理） | ✅ |
 | 交付 2 | `reports/experiments/E4_res320/` 完整记录 | 见目录 | ✅ |
 | 交付 3 | PR 与结果结论 | `reports/experiments/E4_res320/PR_draft.md` | ⏳ PR 待创建 |

@@ -7,7 +7,7 @@
 
 **标题**：E4 320×320 输入分辨率对照实验
 
-**负责人**：待填
+**负责人**：冯玄（成员 7，输入分辨率实验负责人）
 
 **目标与背景**
 基线 `baseline-v1` 在 256×256 输入下内部阳性 Dice 仅 0.3016，Ischemia 分组 Dice 0.0016（几乎全零预测）。
@@ -43,7 +43,7 @@ python scripts/infer.py    --config configs/experiments/E4_res320.yaml
 
 **修改了哪些文件**
 - `configs/experiments/E4_res320.yaml`
-- `reports/experiments/E4_res320/`（21 个文件，详见 `submission_manifest.json`）
+- `reports/experiments/E4_res320/`（23 个文件，含 `summary.md`、`metrics.json`、`plan_mapping.md`、`PR_draft.md`，详见 `submission_manifest.json`）
 - `kaggle/build_e4_notebook.py`、`kaggle/E4_res320/`（6 份 Notebook + `kernel-metadata.json` + `dataset-metadata.json` + `make_samples.py` + `README.md`）
 - 未修改 `src/`、`scripts/`、`tests/`、`data/splits/main_split.json`（与远端 `main` 逐文件 SHA256 一致）
 
