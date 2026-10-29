@@ -14,7 +14,7 @@
 | 5 | 提交配置、训练日志、指标和结论 | `reports/experiments/E4_res320/`（23 项） | ✅ |
 | 交付 1 | `E4_res320.yaml` 和必要的预处理调整 | `configs/experiments/E4_res320.yaml`（无需改预处理） | ✅ |
 | 交付 2 | `reports/experiments/E4_res320/` 完整记录 | 见目录 | ✅ |
-| 交付 3 | PR 与结果结论 | `reports/experiments/E4_res320/PR_draft.md` | ⏳ PR 待创建 |
+| 交付 3 | PR 与结果结论 | `reports/experiments/E4_res320/PR_draft.md`；PR [#1](https://github.com/otto2-5-8/brain-stroke-ct-segmentation/pull/1) | ✅ |
 | 验收 | 仅输入分辨率一个变量与基线不同 | 参数量 7,765,409 与基线完全相同；云端单变量断言逐项比对通过 | ✅ |
 
 ## 二、§1.7 结果目录必备文件
@@ -59,21 +59,21 @@
 
 | 标准 | 状态 |
 | --- | --- |
-| 代码或文档已经评审并合并 | ⏳ 待 PR 评审（需非本人批准） |
-| 相关配置和实验记录已提交 | ✅ 已提交到 `exp/res320` 分支，待推送 |
+| 代码或文档已经评审并合并 | ⏳ PR [#1](https://github.com/otto2-5-8/brain-stroke-ct-segmentation/pull/1) 已提交，待非本人评审与合并 |
+| 相关配置和实验记录已提交 | ✅ 已推送到 `exp/res320`（5 个提交、35 个文件、+33,215 行） |
 | 最小运行命令通过 | ✅ `train.py` / `evaluate.py` / `infer.py` 均已在云端实际运行 |
 | 指标由统一评估脚本生成 | ✅ `scripts/evaluate.py`，未做任何本地改写 |
-| Issue 已更新并关闭 | ⏳ 待创建 Issue #5 |
+| Issue 已更新并关闭 | ⏳ Issue [#2](https://github.com/otto2-5-8/brain-stroke-ct-segmentation/issues/2) 已创建并关联 PR；PR 合并后自动关闭（描述中含「关闭 #2」） |
 
-## 六、尚未完成的流程项（责任划分）
+## 六、流程项进度（责任划分）
 
-| 项 | 条款 | 责任人 |
-| --- | --- | --- |
-| 创建 `baseline-v1` 标签与 Release | §1.5-3 | 组长 王圣杰 |
-| 创建 Issue「E4 320×320 输入分辨率」 | §1.4 | 组长 王圣杰 |
-| 推送 `exp/res320` 并创建 PR | §1.6 | 成员 7 冯玄 |
-| PR 评审（非本人） | §1.6 | 基线负责人 林子涵 / 组长 |
-| Squash Merge 并删除分支 | §1.6 | 组长 |
-| 权重上传 Release/共享盘 | §1.8 | 成员 7 冯玄 |
-| 第二种子复跑（仅入选最终组合时） | §2.3 | 成员 7 冯玄（配置已可复制改写 `seed`） |
-| `kaggle/` 目录归属确认 | §1.2 / §1.3 未覆盖 | 基线负责人 林子涵 |
+| 项 | 条款 | 责任人 | 状态 |
+| --- | --- | --- | --- |
+| 创建 `baseline-v1` 标签与 Release | §1.5-3 | 组长 王圣杰 | ⏳ 未完成（远端无标签，本分支基点为 `main@9836731`） |
+| 创建 Issue「E4 320×320 输入分辨率」 | §1.4 | 成员 7 冯玄 | ✅ [#2](https://github.com/otto2-5-8/brain-stroke-ct-segmentation/issues/2)（仓库原关闭 Issues，已由组长开启） |
+| 推送 `exp/res320` 并创建 PR | §1.6 | 成员 7 冯玄 | ✅ [#1](https://github.com/otto2-5-8/brain-stroke-ct-segmentation/pull/1) |
+| PR 评审（非本人） | §1.6 | 基线负责人 林子涵 / 组长 | ⏳ 待指派与 Approve |
+| Squash Merge 并删除分支 | §1.6 | 组长 | ⏳ 待评审通过后执行 |
+| 权重上传 Release/共享盘 | §1.8 | 成员 7 冯玄 | ⏳ `best.pt` 31,126,213 字节待上传 |
+| 第二种子复跑（仅入选最终组合时） | §2.3 | 成员 7 冯玄 | ⏳ 配置可复制改写 `seed` |
+| `kaggle/` 目录归属确认 | §1.2 / §1.3 未覆盖 | 基线负责人 林子涵 | ⏳ 待确认 |
