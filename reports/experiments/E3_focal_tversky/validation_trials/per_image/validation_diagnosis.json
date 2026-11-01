@@ -1,0 +1,150 @@
+{
+  "source": "/kaggle/input/notebooks/tw1l1ghtzzz/e3-focal-tversky/brain-stroke-e3-b557d751ede8/reports/experiments/E3_focal_tversky",
+  "split": "validation only",
+  "threshold": 0.5,
+  "torch": "2.10.0+cu128",
+  "training_summary": {
+    "status": "completed",
+    "best_validation_dice": 0.248456956186167,
+    "epochs_completed": 7,
+    "parameter_count": 7765409,
+    "elapsed_seconds": 792.8233890533447,
+    "history": [
+      {
+        "epoch": 1,
+        "train_loss": 0.9657798323434653,
+        "validation_loss": 0.9551666445202298,
+        "validation_dice": 0.14301412173415037,
+        "validation_iou": 0.08311523824786635,
+        "learning_rate": 0.0003,
+        "epoch_seconds": 400.103688955307
+      },
+      {
+        "epoch": 2,
+        "train_loss": 0.9464255631789309,
+        "validation_loss": 0.9474750955899557,
+        "validation_dice": 0.16235508782992866,
+        "validation_iou": 0.09533717145939875,
+        "learning_rate": 0.0003,
+        "epoch_seconds": 65.51054573059082
+      },
+      {
+        "epoch": 3,
+        "train_loss": 0.9124213773565194,
+        "validation_loss": 0.8508610867318653,
+        "validation_dice": 0.248456956186167,
+        "validation_iou": 0.19941812923998845,
+        "learning_rate": 0.0003,
+        "epoch_seconds": 65.8205714225769
+      },
+      {
+        "epoch": 4,
+        "train_loss": 0.4107143959075315,
+        "validation_loss": 0.3397457056072733,
+        "validation_dice": 0,
+        "validation_iou": 0,
+        "learning_rate": 0.0003,
+        "epoch_seconds": 65.51295709609985
+      },
+      {
+        "epoch": 5,
+        "train_loss": 0.3387985640826325,
+        "validation_loss": 0.3338149783999792,
+        "validation_dice": 0,
+        "validation_iou": 0,
+        "learning_rate": 0.0003,
+        "epoch_seconds": 64.78561973571777
+      },
+      {
+        "epoch": 6,
+        "train_loss": 0.3352516086986512,
+        "validation_loss": 0.33204220563528086,
+        "validation_dice": 0,
+        "validation_iou": 0,
+        "learning_rate": 0.00015,
+        "epoch_seconds": 64.85383772850037
+      },
+      {
+        "epoch": 7,
+        "train_loss": 0.33445884979168383,
+        "validation_loss": 0.331547851267729,
+        "validation_dice": 0,
+        "validation_iou": 0,
+        "learning_rate": 0.00015,
+        "epoch_seconds": 64.7871675491333
+      }
+    ]
+  },
+  "checkpoints": {
+    "best": {
+      "epoch": 3,
+      "sha256": "5439d09cba2f78930fa825c18ca66f391816ad192cc98ea2431a06648065e18d",
+      "metrics": {
+        "case_count": 998,
+        "positive_case_count": 334,
+        "normal_case_count": 664,
+        "positive_mean_dice": 0.248456956186167,
+        "positive_mean_iou": 0.19941812923998845,
+        "positive_pixel_precision": 0.6880682593856655,
+        "positive_pixel_recall": 0.15713973935274678,
+        "normal_false_positive_pixel_ratio": 0.004749114254871047
+      },
+      "finite_logits": true,
+      "min_probability": 0.00001291993339691544,
+      "max_probability": 1,
+      "mean_probability": 0.004469035892423621,
+      "predicted_positive_pixels": 279912,
+      "zero_prediction_cases": 511,
+      "positive_cases_with_overlap": 140,
+      "validation_loss_mean_of_batches": 0.8508164589367215,
+      "all_background_loss_mean_of_cases": 0.33340279902278414,
+      "mask_groups": {
+        "nonempty_mask": {
+          "cases": 334,
+          "mask_pixels": 320740,
+          "mean_loss": 0.7888006047083589
+        },
+        "empty_mask": {
+          "cases": 664,
+          "mask_pixels": 0,
+          "mean_loss": 0.8813763390104454
+        }
+      }
+    },
+    "last": {
+      "epoch": 7,
+      "sha256": "5c9480a373695cfd6bf4d2ea75a1f14992661aeaad7b4146761e71bb8829e459",
+      "metrics": {
+        "case_count": 998,
+        "positive_case_count": 334,
+        "normal_case_count": 664,
+        "positive_mean_dice": 0,
+        "positive_mean_iou": 0,
+        "positive_pixel_precision": 0,
+        "positive_pixel_recall": 0,
+        "normal_false_positive_pixel_ratio": 0
+      },
+      "finite_logits": true,
+      "min_probability": 1.058462317793385e-9,
+      "max_probability": 4.958396857546177e-7,
+      "mean_probability": 1.4515948262868771e-8,
+      "predicted_positive_pixels": 0,
+      "zero_prediction_cases": 998,
+      "positive_cases_with_overlap": 0,
+      "validation_loss_mean_of_batches": 0.3315527387007716,
+      "all_background_loss_mean_of_cases": 0.33340279902278414,
+      "mask_groups": {
+        "nonempty_mask": {
+          "cases": 334,
+          "mask_pixels": 320740,
+          "mean_loss": 0.9962043649779109
+        },
+        "empty_mask": {
+          "cases": 664,
+          "mask_pixels": 0,
+          "mean_loss": 0.0021848297093753667
+        }
+      }
+    }
+  }
+}

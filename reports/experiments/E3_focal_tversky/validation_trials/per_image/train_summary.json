@@ -1,0 +1,72 @@
+{
+  "status": "completed",
+  "best_validation_dice": 0.248456956186167,
+  "epochs_completed": 7,
+  "parameter_count": 7765409,
+  "elapsed_seconds": 792.8233890533447,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.9657798323434653,
+      "validation_loss": 0.9551666445202298,
+      "validation_dice": 0.14301412173415037,
+      "validation_iou": 0.08311523824786635,
+      "learning_rate": 0.0003,
+      "epoch_seconds": 400.103688955307
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.9464255631789309,
+      "validation_loss": 0.9474750955899557,
+      "validation_dice": 0.16235508782992866,
+      "validation_iou": 0.09533717145939875,
+      "learning_rate": 0.0003,
+      "epoch_seconds": 65.51054573059082
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.9124213773565194,
+      "validation_loss": 0.8508610867318653,
+      "validation_dice": 0.248456956186167,
+      "validation_iou": 0.19941812923998845,
+      "learning_rate": 0.0003,
+      "epoch_seconds": 65.8205714225769
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.4107143959075315,
+      "validation_loss": 0.3397457056072733,
+      "validation_dice": 0.0,
+      "validation_iou": 0.0,
+      "learning_rate": 0.0003,
+      "epoch_seconds": 65.51295709609985
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.3387985640826325,
+      "validation_loss": 0.3338149783999792,
+      "validation_dice": 0.0,
+      "validation_iou": 0.0,
+      "learning_rate": 0.0003,
+      "epoch_seconds": 64.78561973571777
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.3352516086986512,
+      "validation_loss": 0.33204220563528086,
+      "validation_dice": 0.0,
+      "validation_iou": 0.0,
+      "learning_rate": 0.00015,
+      "epoch_seconds": 64.85383772850037
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.33445884979168383,
+      "validation_loss": 0.331547851267729,
+      "validation_dice": 0.0,
+      "validation_iou": 0.0,
+      "learning_rate": 0.00015,
+      "epoch_seconds": 64.7871675491333
+    }
+  ]
+}

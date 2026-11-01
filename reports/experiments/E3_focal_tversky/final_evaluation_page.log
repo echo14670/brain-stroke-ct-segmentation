@@ -1,0 +1,1041 @@
+- navigation "Main Kaggle page navigation":
+  - button "Navigation menu": menu
+  - link "Skip to content":
+    - /url: "#site-content"
+    - text: Skip to
+    - text: content
+  - link "Return to Kaggle home page":
+    - /url: /
+  - button "Create on Kaggle":
+    - paragraph: Create
+  - list:
+    - listitem "Home List Item":
+      - link "Home":
+        - /url: /
+        - paragraph: Home
+    - listitem "Competitions List Item":
+      - link "Competitions":
+        - /url: /competitions
+        - paragraph: Competitions
+    - listitem "Benchmarks List Item":
+      - link "Benchmarks":
+        - /url: /benchmarks
+        - paragraph: Benchmarks
+    - listitem "Arenas List Item":
+      - link "Arenas":
+        - /url: /arenas
+        - paragraph: Arenas
+    - listitem "Game Arena List Item":
+      - link "Game Arena":
+        - /url: /game-arena
+        - paragraph: Game Arena
+  - list:
+    - listitem "Data Hub List Item":
+      - link "Data Hub":
+        - /url: "#"
+        - paragraph: Data Hub
+      - button "Expand"
+  - list:
+    - listitem "More on Kaggle List Item":
+      - link "More on Kaggle":
+        - /url: "#"
+        - paragraph: More
+      - button "Expand"
+  - separator
+  - list:
+    - listitem "Your Work List Item":
+      - link "Your Work":
+        - /url: /work
+        - paragraph: Your Work
+      - button "Collapse Your Work" [expanded]
+    - listitem "Collapse Viewed List Item":
+      - link "Collapse Viewed" [expanded]:
+        - /url: "#"
+        - paragraph: Viewed
+      - button "Collapse Viewed"
+    - list:
+      - listitem "E3 Focal Tversky 损失函数对照实验 List Item":
+        - link "E3 Focal Tversky 损失函数对照实验":
+          - /url: /code/tw1l1ghtzzz/e3-focal-tversky
+          - paragraph: E3 Focal Tversky 损失函数对照实验
+      - listitem "Pulmonary Chest X-Ray Abnormalities List Item":
+        - link "Pulmonary Chest X-Ray Abnormalities":
+          - /url: /datasets/kmader/pulmonary-chest-xray-abnormalities
+          - paragraph: Pulmonary Chest X-Ray Abnormalities
+    - listitem "Collapse Edited List Item":
+      - link "Collapse Edited" [expanded]:
+        - /url: "#"
+        - paragraph: Edited
+      - button "Collapse Edited"
+    - list:
+      - listitem "E3 Focal Tversky 损失函数对照实验 List Item":
+        - link "E3 Focal Tversky 损失函数对照实验":
+          - /url: /code/tw1l1ghtzzz/e3-focal-tversky
+          - paragraph: E3 Focal Tversky 损失函数对照实验
+  - button "Event running 1 View Active Events":
+    - generic "Event running": update
+    - generic: "1"
+    - paragraph: View Active Events
+- navigation "Main menu, search and your account":
+  - textbox "Search"
+  - button "tw1l1ghtzzz":
+    - generic "tw1l1ghtzzz"
+- main:
+  - link "tw1l1ghtzzz's profile":
+    - /url: /tw1l1ghtzzz
+    - generic "tw1l1ghtzzz"
+  - generic: tw1l1ghtzzz
+  - generic: · 5m ago · 4 views · Private
+  - button "Upvote":
+    - generic: arrow_drop_up
+  - button "0 votes": "0"
+  - button "Share":
+    - generic: lock
+    - generic: Share
+  - link "Edit":
+    - /url: /code/tw1l1ghtzzz/e3-focal-tversky/edit/run/363334429
+    - button "Edit":
+      - generic: edit
+      - generic: Edit
+  - button "Download":
+    - generic: file_download
+    - generic: Download
+  - button "More options for this notebook": more_vert
+  - heading "E3 Focal Tversky 损失函数对照实验" [level=1]
+  - button "Edit title": edit
+  - tablist:
+    - tab "Notebook, 1 of 6":
+      - generic: Notebook
+    - tab "Input, 2 of 6":
+      - generic: Input
+    - tab "Output, 3 of 6":
+      - generic: Output
+    - tab "Logs, 4 of 6" [selected]:
+      - generic: Logs
+    - tab "Comments (0), 5 of 6":
+      - generic: Comments (0)
+    - tab "Settings, 6 of 6":
+      - generic: Settings
+  - separator
+  - heading "Logs" [level=2]
+  - progressbar "Loading":
+  - heading "Running for 311.2s" [level=5]
+  - generic: Accelerator
+  - paragraph: GPU T4 x2
+  - generic: Environment
+  - paragraph:
+    - generic: Latest Container Image
+  - generic: Output
+  - paragraph: 0 B
+  - separator
+  - table:
+    - rowgroup:
+      - 'row "Time # Log Message"':
+        - columnheader "Time":
+          - generic: Time
+        - columnheader "#":
+          - generic: "#"
+        - columnheader "Log Message":
+          - generic: Log Message
+    - rowgroup:
+      - 'row "6.7s 0 0.00s - Debugger warning: It seems that frozen modules are being used, which may"':
+        - cell "6.7s"
+        - cell "0"
+        - 'cell "0.00s - Debugger warning: It seems that frozen modules are being used, which may"'
+      - row "6.7s 1 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off":
+        - cell "6.7s"
+        - cell "1"
+        - cell "0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off"
+      - row "6.7s 2 0.00s - to python to disable frozen modules.":
+        - cell "6.7s"
+        - cell "2"
+        - cell "0.00s - to python to disable frozen modules."
+      - 'row "6.7s 3 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation."':
+        - cell "6.7s"
+        - cell "3"
+        - 'cell "0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation."'
+      - 'row "7.3s 4 0.00s - Debugger warning: It seems that frozen modules are being used, which may"':
+        - cell "7.3s"
+        - cell "4"
+        - 'cell "0.00s - Debugger warning: It seems that frozen modules are being used, which may"'
+      - row "7.3s 5 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off":
+        - cell "7.3s"
+        - cell "5"
+        - cell "0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off"
+      - row "7.3s 6 0.00s - to python to disable frozen modules.":
+        - cell "7.3s"
+        - cell "6"
+        - cell "0.00s - to python to disable frozen modules."
+      - 'row "7.3s 7 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation."':
+        - cell "7.3s"
+        - cell "7"
+        - 'cell "0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation."'
+      - 'row "57.6s 8 torch: 2.11.0+cu128"':
+        - cell "57.6s"
+        - cell "8"
+        - 'cell "torch: 2.11.0+cu128"'
+      - 'row "57.6s 9 torch_cuda: 12.8"':
+        - cell "57.6s"
+        - cell "9"
+        - 'cell "torch_cuda: 12.8"'
+      - 'row "57.6s 10 cuda_device_count: 2"':
+        - cell "57.6s"
+        - cell "10"
+        - 'cell "cuda_device_count: 2"'
+      - 'row "57.6s 11 cuda_available: True"':
+        - cell "57.6s"
+        - cell "11"
+        - 'cell "cuda_available: True"'
+      - 'row "57.6s 12 CUDA_VISIBLE_DEVICES: None"':
+        - cell "57.6s"
+        - cell "12"
+        - 'cell "CUDA_VISIBLE_DEVICES: None"'
+      - 'row "58.2s 13 nvidia-smi rc: 0"':
+        - cell "58.2s"
+        - cell "13"
+        - 'cell "nvidia-smi rc: 0"'
+      - row "58.2s 14 Thu Oct 29 01:19:47 2026":
+        - cell "58.2s"
+        - cell "14"
+        - cell "Thu Oct 29 01:19:47 2026"
+      - row "58.2s 15 +-----------------------------------------------------------------------------------------+":
+        - cell "58.2s"
+        - cell "15"
+        - cell "+-----------------------------------------------------------------------------------------+"
+      - 'row "58.2s 16 | NVIDIA-SMI 580.178.04 Driver Version: 580.178.04 CUDA Version: 13.0 |"':
+        - cell "58.2s"
+        - cell "16"
+        - 'cell "| NVIDIA-SMI 580.178.04 Driver Version: 580.178.04 CUDA Version: 13.0 |"'
+      - row "58.2s 17 +-----------------------------------------+------------------------+----------------------+":
+        - cell "58.2s"
+        - cell "17"
+        - cell "+-----------------------------------------+------------------------+----------------------+"
+      - row "58.2s 18 | GPU Name Persistence-M | Bus-Id Disp.A | Volatile Uncorr. ECC |":
+        - cell "58.2s"
+        - cell "18"
+        - cell "| GPU Name Persistence-M | Bus-Id Disp.A | Volatile Uncorr. ECC |"
+      - row "58.2s 19 | Fan Temp Perf Pwr:Usage/Cap | Memory-Usage | GPU-Util Compute M. |":
+        - cell "58.2s"
+        - cell "19"
+        - cell "| Fan Temp Perf Pwr:Usage/Cap | Memory-Usage | GPU-Util Compute M. |"
+      - row "58.2s 20 | | | MIG M. |":
+        - cell "58.2s"
+        - cell "20"
+        - cell "| | | MIG M. |"
+      - row "58.2s 21 |=========================================+========================+======================|":
+        - cell "58.2s"
+        - cell "21"
+        - cell "|=========================================+========================+======================|"
+      - row "58.2s 22 | 0 Tesla T4 Off | 00000000:00:04.0 Off | 0 |":
+        - cell "58.2s"
+        - cell "22"
+        - cell "| 0 Tesla T4 Off | 00000000:00:04.0 Off | 0 |"
+      - row "58.2s 23 | N/A 48C P8 10W / 70W | 3MiB / 15360MiB | 0% Default |":
+        - cell "58.2s"
+        - cell "23"
+        - cell "| N/A 48C P8 10W / 70W | 3MiB / 15360MiB | 0% Default |"
+      - row "58.2s 24 | | | N/A |":
+        - cell "58.2s"
+        - cell "24"
+        - cell "| | | N/A |"
+      - row "58.2s 25 +-----------------------------------------+------------------------+----------------------+":
+        - cell "58.2s"
+        - cell "25"
+        - cell "+-----------------------------------------+------------------------+----------------------+"
+      - row "58.2s 26 | 1 Tesla T4 Off | 00000000:00:05.0 Off | 0 |":
+        - cell "58.2s"
+        - cell "26"
+        - cell "| 1 Tesla T4 Off | 00000000:00:05.0 Off | 0 |"
+      - row "58.2s 27 | N/A 46C P8 10W / 70W | 3MiB / 15360MiB | 0% Default |":
+        - cell "58.2s"
+        - cell "27"
+        - cell "| N/A 46C P8 10W / 70W | 3MiB / 15360MiB | 0% Default |"
+      - row "58.2s 28 | | | N/A |":
+        - cell "58.2s"
+        - cell "28"
+        - cell "| | | N/A |"
+      - row "58.2s 29 +-----------------------------------------+------------------------+----------------------+":
+        - cell "58.2s"
+        - cell "29"
+        - cell "+-----------------------------------------+------------------------+----------------------+"
+      - row "58.2s 30":
+        - cell "58.2s"
+        - cell "30"
+        - cell
+      - row "58.2s 31 +-----------------------------------------------------------------------------------------+":
+        - cell "58.2s"
+        - cell "31"
+        - cell "+-----------------------------------------------------------------------------------------+"
+      - 'row "58.2s 32 | Processes: |"':
+        - cell "58.2s"
+        - cell "32"
+        - 'cell "| Processes: |"'
+      - row "58.2s 33 | GPU GI CI PID Type Process name GPU Memory |":
+        - cell "58.2s"
+        - cell "33"
+        - cell "| GPU GI CI PID Type Process name GPU Memory |"
+      - row "58.2s 34 | ID ID Usage |":
+        - cell "58.2s"
+        - cell "34"
+        - cell "| ID ID Usage |"
+      - row "58.2s 35 |=========================================================================================|":
+        - cell "58.2s"
+        - cell "35"
+        - cell "|=========================================================================================|"
+      - row "58.2s 36 | No running processes found |":
+        - cell "58.2s"
+        - cell "36"
+        - cell "| No running processes found |"
+      - row "58.2s 37 +-----------------------------------------------------------------------------------------+":
+        - cell "58.2s"
+        - cell "37"
+        - cell "+-----------------------------------------------------------------------------------------+"
+      - row "58.2s 38":
+        - cell "58.2s"
+        - cell "38"
+        - cell
+      - row "58.2s 39":
+        - cell "58.2s"
+        - cell "39"
+        - cell
+      - 'row "58.2s 40 nvidia device nodes: [''/dev/nvidia-caps'', ''/dev/nvidia-uvm'', ''/dev/nvidia-uvm-tools'', ''/dev/nvidia0'', ''/dev/nvidia1'', ''/dev/nvidiactl'']"':
+        - cell "58.2s"
+        - cell "40"
+        - 'cell "nvidia device nodes: [''/dev/nvidia-caps'', ''/dev/nvidia-uvm'', ''/dev/nvidia-uvm-tools'', ''/dev/nvidia0'', ''/dev/nvidia1'', ''/dev/nvidiactl'']"'
+      - 'row "65.0s 41 torch wheel: /kaggle/input/datasets/amitmalakarjoy/torch-2100-cu128/torch-2.10.0cu128-cp313-cp313-manylinux_2_28_x86_64.whl"':
+        - cell "65.0s"
+        - cell "41"
+        - 'cell "torch wheel: /kaggle/input/datasets/amitmalakarjoy/torch-2100-cu128/torch-2.10.0cu128-cp313-cp313-manylinux_2_28_x86_64.whl"'
+      - 'row "73.0s 42 normalized wheel: /kaggle/working/torch-2.10.0+cu128-cp313-cp313-manylinux_2_28_x86_64.whl"':
+        - cell "73.0s"
+        - cell "42"
+        - 'cell "normalized wheel: /kaggle/working/torch-2.10.0+cu128-cp313-cp313-manylinux_2_28_x86_64.whl"'
+      - 'row "79.7s 43 nvidia wheels: 15"':
+        - cell "79.7s"
+        - cell "43"
+        - 'cell "nvidia wheels: 15"'
+      - 'row "82.1s 44 Official PyTorch SHA256 verified: torch-2.10.0+cu128-cp313-cp313-manylinux_2_28_x86_64.whl 7b4bd23ed63de97456fcc81c26fea9f02ee02ce1112111c4dac0d8cfe574b23e"':
+        - cell "82.1s"
+        - cell "44"
+        - 'cell "Official PyTorch SHA256 verified: torch-2.10.0+cu128-cp313-cp313-manylinux_2_28_x86_64.whl 7b4bd23ed63de97456fcc81c26fea9f02ee02ce1112111c4dac0d8cfe574b23e"'
+      - 'row "86.1s 45 Official PyPI SHA256 verified: nvidia_cublas_cu12-12.8.4.1-py3-none-manylinux_2_27_x86_64.whl"':
+        - cell "86.1s"
+        - cell "45"
+        - 'cell "Official PyPI SHA256 verified: nvidia_cublas_cu12-12.8.4.1-py3-none-manylinux_2_27_x86_64.whl"'
+      - 'row "86.2s 46 Official PyPI SHA256 verified: nvidia_cuda_cupti_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl"':
+        - cell "86.2s"
+        - cell "46"
+        - 'cell "Official PyPI SHA256 verified: nvidia_cuda_cupti_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl"'
+      - 'row "86.8s 47 Official PyPI SHA256 verified: nvidia_cuda_nvrtc_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl"':
+        - cell "86.8s"
+        - cell "47"
+        - 'cell "Official PyPI SHA256 verified: nvidia_cuda_nvrtc_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl"'
+      - 'row "86.8s 48 Official PyPI SHA256 verified: nvidia_cuda_runtime_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl"':
+        - cell "86.8s"
+        - cell "48"
+        - 'cell "Official PyPI SHA256 verified: nvidia_cuda_runtime_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl"'
+      - 'row "91.6s 49 Official PyPI SHA256 verified: nvidia_cudnn_cu12-9.10.2.21-py3-none-manylinux_2_27_x86_64.whl"':
+        - cell "91.6s"
+        - cell "49"
+        - 'cell "Official PyPI SHA256 verified: nvidia_cudnn_cu12-9.10.2.21-py3-none-manylinux_2_27_x86_64.whl"'
+      - 'row "93.0s 50 Official PyPI SHA256 verified: nvidia_cufft_cu12-11.3.3.83-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl"':
+        - cell "93.0s"
+        - cell "50"
+        - 'cell "Official PyPI SHA256 verified: nvidia_cufft_cu12-11.3.3.83-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl"'
+      - 'row "93.0s 51 Official PyPI SHA256 verified: nvidia_cufile_cu12-1.13.1.3-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl"':
+        - cell "93.0s"
+        - cell "51"
+        - 'cell "Official PyPI SHA256 verified: nvidia_cufile_cu12-1.13.1.3-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl"'
+      - 'row "93.5s 52 Official PyPI SHA256 verified: nvidia_curand_cu12-10.3.9.90-py3-none-manylinux_2_27_x86_64.whl"':
+        - cell "93.5s"
+        - cell "52"
+        - 'cell "Official PyPI SHA256 verified: nvidia_curand_cu12-10.3.9.90-py3-none-manylinux_2_27_x86_64.whl"'
+      - 'row "95.3s 53 Official PyPI SHA256 verified: nvidia_cusolver_cu12-11.7.3.90-py3-none-manylinux_2_27_x86_64.whl"':
+        - cell "95.3s"
+        - cell "53"
+        - 'cell "Official PyPI SHA256 verified: nvidia_cusolver_cu12-11.7.3.90-py3-none-manylinux_2_27_x86_64.whl"'
+      - 'row "97.2s 54 Official PyPI SHA256 verified: nvidia_cusparse_cu12-12.5.8.93-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl"':
+        - cell "97.2s"
+        - cell "54"
+        - 'cell "Official PyPI SHA256 verified: nvidia_cusparse_cu12-12.5.8.93-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl"'
+      - 'row "99.1s 55 Official PyPI SHA256 verified: nvidia_cusparselt_cu12-0.7.1-py3-none-manylinux2014_x86_64.whl"':
+        - cell "99.1s"
+        - cell "55"
+        - 'cell "Official PyPI SHA256 verified: nvidia_cusparselt_cu12-0.7.1-py3-none-manylinux2014_x86_64.whl"'
+      - 'row "101.3s 56 Official PyPI SHA256 verified: nvidia_nccl_cu12-2.27.5-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl"':
+        - cell "101.3s"
+        - cell "56"
+        - 'cell "Official PyPI SHA256 verified: nvidia_nccl_cu12-2.27.5-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl"'
+      - 'row "101.6s 57 Official PyPI SHA256 verified: nvidia_nvjitlink_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl"':
+        - cell "101.6s"
+        - cell "57"
+        - 'cell "Official PyPI SHA256 verified: nvidia_nvjitlink_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl"'
+      - 'row "102.5s 58 Official PyPI SHA256 verified: nvidia_nvshmem_cu12-3.4.5-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl"':
+        - cell "102.5s"
+        - cell "58"
+        - 'cell "Official PyPI SHA256 verified: nvidia_nvshmem_cu12-3.4.5-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl"'
+      - 'row "102.5s 59 Official PyPI SHA256 verified: nvidia_nvtx_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl"':
+        - cell "102.5s"
+        - cell "59"
+        - 'cell "Official PyPI SHA256 verified: nvidia_nvtx_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl"'
+      - row "103.3s 60 Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_cublas_cu12-12.8.4.1-py3-none-manylinux_2_27_x86_64.whl":
+        - cell "103.3s"
+        - cell "60"
+        - cell "Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_cublas_cu12-12.8.4.1-py3-none-manylinux_2_27_x86_64.whl"
+      - row "103.5s 61 Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_cublas_cu12-12.8.4.1-py3-none-manylinux_2_27_x86_64.whl":
+        - cell "103.5s"
+        - cell "61"
+        - cell "Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_cublas_cu12-12.8.4.1-py3-none-manylinux_2_27_x86_64.whl"
+      - row "105.0s 62 Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_cuda_cupti_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl":
+        - cell "105.0s"
+        - cell "62"
+        - cell "Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_cuda_cupti_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl"
+      - row "105.0s 63 Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_cuda_nvrtc_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl":
+        - cell "105.0s"
+        - cell "63"
+        - cell "Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_cuda_nvrtc_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl"
+      - row "105.2s 64 Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_cuda_cupti_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl":
+        - cell "105.2s"
+        - cell "64"
+        - cell "Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_cuda_cupti_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl"
+      - row "105.2s 65 Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_cuda_nvrtc_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl":
+        - cell "105.2s"
+        - cell "65"
+        - cell "Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_cuda_nvrtc_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl"
+      - row "105.3s 66 Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_cuda_runtime_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl":
+        - cell "105.3s"
+        - cell "66"
+        - cell "Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_cuda_runtime_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl"
+      - row "105.3s 67 Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_cudnn_cu12-9.10.2.21-py3-none-manylinux_2_27_x86_64.whl":
+        - cell "105.3s"
+        - cell "67"
+        - cell "Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_cudnn_cu12-9.10.2.21-py3-none-manylinux_2_27_x86_64.whl"
+      - row "105.5s 68 Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_cuda_runtime_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl":
+        - cell "105.5s"
+        - cell "68"
+        - cell "Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_cuda_runtime_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl"
+      - row "105.5s 69 Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_cudnn_cu12-9.10.2.21-py3-none-manylinux_2_27_x86_64.whl":
+        - cell "105.5s"
+        - cell "69"
+        - cell "Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_cudnn_cu12-9.10.2.21-py3-none-manylinux_2_27_x86_64.whl"
+      - row "107.2s 70 Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_cufft_cu12-11.3.3.83-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl":
+        - cell "107.2s"
+        - cell "70"
+        - cell "Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_cufft_cu12-11.3.3.83-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl"
+      - row "107.4s 71 Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_cufft_cu12-11.3.3.83-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl":
+        - cell "107.4s"
+        - cell "71"
+        - cell "Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_cufft_cu12-11.3.3.83-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl"
+      - row "107.7s 72 Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_cufile_cu12-1.13.1.3-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl":
+        - cell "107.7s"
+        - cell "72"
+        - cell "Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_cufile_cu12-1.13.1.3-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl"
+      - row "107.7s 73 Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_curand_cu12-10.3.9.90-py3-none-manylinux_2_27_x86_64.whl":
+        - cell "107.7s"
+        - cell "73"
+        - cell "Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_curand_cu12-10.3.9.90-py3-none-manylinux_2_27_x86_64.whl"
+      - row "107.9s 74 Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_cusolver_cu12-11.7.3.90-py3-none-manylinux_2_27_x86_64.whl":
+        - cell "107.9s"
+        - cell "74"
+        - cell "Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_cusolver_cu12-11.7.3.90-py3-none-manylinux_2_27_x86_64.whl"
+      - row "107.9s 75 Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_cufile_cu12-1.13.1.3-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl":
+        - cell "107.9s"
+        - cell "75"
+        - cell "Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_cufile_cu12-1.13.1.3-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl"
+      - row "107.9s 76 Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_curand_cu12-10.3.9.90-py3-none-manylinux_2_27_x86_64.whl":
+        - cell "107.9s"
+        - cell "76"
+        - cell "Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_curand_cu12-10.3.9.90-py3-none-manylinux_2_27_x86_64.whl"
+      - row "107.9s 77 Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_cusolver_cu12-11.7.3.90-py3-none-manylinux_2_27_x86_64.whl":
+        - cell "107.9s"
+        - cell "77"
+        - cell "Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_cusolver_cu12-11.7.3.90-py3-none-manylinux_2_27_x86_64.whl"
+      - row "108.7s 78 Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_cusparse_cu12-12.5.8.93-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl":
+        - cell "108.7s"
+        - cell "78"
+        - cell "Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_cusparse_cu12-12.5.8.93-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl"
+      - row "108.9s 79 Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_cusparse_cu12-12.5.8.93-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl":
+        - cell "108.9s"
+        - cell "79"
+        - cell "Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_cusparse_cu12-12.5.8.93-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl"
+      - row "109.5s 80 Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_cusparselt_cu12-0.7.1-py3-none-manylinux2014_x86_64.whl":
+        - cell "109.5s"
+        - cell "80"
+        - cell "Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_cusparselt_cu12-0.7.1-py3-none-manylinux2014_x86_64.whl"
+      - row "109.7s 81 Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_cusparselt_cu12-0.7.1-py3-none-manylinux2014_x86_64.whl":
+        - cell "109.7s"
+        - cell "81"
+        - cell "Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_cusparselt_cu12-0.7.1-py3-none-manylinux2014_x86_64.whl"
+      - row "110.3s 82 Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_nccl_cu12-2.27.5-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl":
+        - cell "110.3s"
+        - cell "82"
+        - cell "Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_nccl_cu12-2.27.5-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl"
+      - row "110.5s 83 Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_nccl_cu12-2.27.5-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl":
+        - cell "110.5s"
+        - cell "83"
+        - cell "Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_nccl_cu12-2.27.5-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl"
+      - row "111.1s 84 Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_nvjitlink_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl":
+        - cell "111.1s"
+        - cell "84"
+        - cell "Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_nvjitlink_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl"
+      - row "111.3s 85 Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_nvshmem_cu12-3.4.5-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl":
+        - cell "111.3s"
+        - cell "85"
+        - cell "Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_nvshmem_cu12-3.4.5-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl"
+      - row "111.4s 86 Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_nvjitlink_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl":
+        - cell "111.4s"
+        - cell "86"
+        - cell "Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_nvjitlink_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl"
+      - row "111.4s 87 Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_nvshmem_cu12-3.4.5-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl":
+        - cell "111.4s"
+        - cell "87"
+        - cell "Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_nvshmem_cu12-3.4.5-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl"
+      - row "111.7s 88 Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_nvtx_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl":
+        - cell "111.7s"
+        - cell "88"
+        - cell "Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_nvtx_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl"
+      - row "111.7s 89 nvidia-cublas-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel.":
+        - cell "111.7s"
+        - cell "89"
+        - cell "nvidia-cublas-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel."
+      - row "111.7s 90 nvidia-cuda-cupti-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel.":
+        - cell "111.7s"
+        - cell "90"
+        - cell "nvidia-cuda-cupti-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel."
+      - row "111.7s 91 nvidia-cuda-nvrtc-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel.":
+        - cell "111.7s"
+        - cell "91"
+        - cell "nvidia-cuda-nvrtc-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel."
+      - row "111.7s 92 nvidia-cuda-runtime-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel.":
+        - cell "111.7s"
+        - cell "92"
+        - cell "nvidia-cuda-runtime-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel."
+      - row "111.7s 93 nvidia-cufft-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel.":
+        - cell "111.7s"
+        - cell "93"
+        - cell "nvidia-cufft-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel."
+      - row "111.7s 94 nvidia-cufile-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel.":
+        - cell "111.7s"
+        - cell "94"
+        - cell "nvidia-cufile-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel."
+      - row "111.7s 95 nvidia-curand-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel.":
+        - cell "111.7s"
+        - cell "95"
+        - cell "nvidia-curand-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel."
+      - row "111.7s 96 nvidia-cusolver-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel.":
+        - cell "111.7s"
+        - cell "96"
+        - cell "nvidia-cusolver-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel."
+      - row "111.7s 97 nvidia-cusparse-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel.":
+        - cell "111.7s"
+        - cell "97"
+        - cell "nvidia-cusparse-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel."
+      - row "111.7s 98 nvidia-cusparselt-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel.":
+        - cell "111.7s"
+        - cell "98"
+        - cell "nvidia-cusparselt-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel."
+      - row "111.7s 99 nvidia-nvjitlink-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel.":
+        - cell "111.7s"
+        - cell "99"
+        - cell "nvidia-nvjitlink-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel."
+      - row "111.7s 100 nvidia-nvshmem-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel.":
+        - cell "111.7s"
+        - cell "100"
+        - cell "nvidia-nvshmem-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel."
+      - row "111.7s 101 nvidia-nvtx-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel.":
+        - cell "111.7s"
+        - cell "101"
+        - cell "nvidia-nvtx-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel."
+      - 'row "111.7s 102 Installing collected packages: nvidia-nccl-cu12, nvidia-cudnn-cu12"':
+        - cell "111.7s"
+        - cell "102"
+        - 'cell "Installing collected packages: nvidia-nccl-cu12, nvidia-cudnn-cu12"'
+      - 'row "111.7s 103 Attempting uninstall: nvidia-nccl-cu12"':
+        - cell "111.7s"
+        - cell "103"
+        - 'cell "Attempting uninstall: nvidia-nccl-cu12"'
+      - 'row "111.7s 104 Found existing installation: nvidia-nccl-cu12 2.28.9"':
+        - cell "111.7s"
+        - cell "104"
+        - 'cell "Found existing installation: nvidia-nccl-cu12 2.28.9"'
+      - row "111.7s 105 Uninstalling nvidia-nccl-cu12-2.28.9:":
+        - cell "111.7s"
+        - cell "105"
+        - cell "Uninstalling nvidia-nccl-cu12-2.28.9:"
+      - row "111.9s 106 Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_nvtx_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl":
+        - cell "111.9s"
+        - cell "106"
+        - cell "Processing /kaggle/input/datasets/koumeimaki/vllm019-cp311-cu128-wheelhouse/nvidia_nvtx_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl"
+      - row "111.9s 107 nvidia-cublas-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel.":
+        - cell "111.9s"
+        - cell "107"
+        - cell "nvidia-cublas-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel."
+      - row "111.9s 108 nvidia-cuda-cupti-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel.":
+        - cell "111.9s"
+        - cell "108"
+        - cell "nvidia-cuda-cupti-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel."
+      - row "111.9s 109 nvidia-cuda-nvrtc-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel.":
+        - cell "111.9s"
+        - cell "109"
+        - cell "nvidia-cuda-nvrtc-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel."
+      - row "111.9s 110 nvidia-cuda-runtime-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel.":
+        - cell "111.9s"
+        - cell "110"
+        - cell "nvidia-cuda-runtime-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel."
+      - row "111.9s 111 nvidia-cufft-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel.":
+        - cell "111.9s"
+        - cell "111"
+        - cell "nvidia-cufft-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel."
+      - row "111.9s 112 nvidia-cufile-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel.":
+        - cell "111.9s"
+        - cell "112"
+        - cell "nvidia-cufile-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel."
+      - row "111.9s 113 nvidia-curand-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel.":
+        - cell "111.9s"
+        - cell "113"
+        - cell "nvidia-curand-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel."
+      - row "111.9s 114 nvidia-cusolver-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel.":
+        - cell "111.9s"
+        - cell "114"
+        - cell "nvidia-cusolver-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel."
+      - row "111.9s 115 nvidia-cusparse-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel.":
+        - cell "111.9s"
+        - cell "115"
+        - cell "nvidia-cusparse-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel."
+      - row "111.9s 116 nvidia-cusparselt-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel.":
+        - cell "111.9s"
+        - cell "116"
+        - cell "nvidia-cusparselt-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel."
+      - row "111.9s 117 nvidia-nvjitlink-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel.":
+        - cell "111.9s"
+        - cell "117"
+        - cell "nvidia-nvjitlink-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel."
+      - row "111.9s 118 nvidia-nvshmem-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel.":
+        - cell "111.9s"
+        - cell "118"
+        - cell "nvidia-nvshmem-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel."
+      - row "111.9s 119 nvidia-nvtx-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel.":
+        - cell "111.9s"
+        - cell "119"
+        - cell "nvidia-nvtx-cu12 is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel."
+      - 'row "111.9s 120 Installing collected packages: nvidia-nccl-cu12, nvidia-cudnn-cu12"':
+        - cell "111.9s"
+        - cell "120"
+        - 'cell "Installing collected packages: nvidia-nccl-cu12, nvidia-cudnn-cu12"'
+      - 'row "111.9s 121 Attempting uninstall: nvidia-nccl-cu12"':
+        - cell "111.9s"
+        - cell "121"
+        - 'cell "Attempting uninstall: nvidia-nccl-cu12"'
+      - 'row "111.9s 122 Found existing installation: nvidia-nccl-cu12 2.28.9"':
+        - cell "111.9s"
+        - cell "122"
+        - 'cell "Found existing installation: nvidia-nccl-cu12 2.28.9"'
+      - row "111.9s 123 Uninstalling nvidia-nccl-cu12-2.28.9:":
+        - cell "111.9s"
+        - cell "123"
+        - cell "Uninstalling nvidia-nccl-cu12-2.28.9:"
+      - row "114.3s 124 Successfully uninstalled nvidia-nccl-cu12-2.28.9":
+        - cell "114.3s"
+        - cell "124"
+        - cell "Successfully uninstalled nvidia-nccl-cu12-2.28.9"
+      - row "114.5s 125 Successfully uninstalled nvidia-nccl-cu12-2.28.9":
+        - cell "114.5s"
+        - cell "125"
+        - cell "Successfully uninstalled nvidia-nccl-cu12-2.28.9"
+      - 'row "117.8s 126 Attempting uninstall: nvidia-cudnn-cu12"':
+        - cell "117.8s"
+        - cell "126"
+        - 'cell "Attempting uninstall: nvidia-cudnn-cu12"'
+      - 'row "117.8s 127 Found existing installation: nvidia-cudnn-cu12 9.19.0.56"':
+        - cell "117.8s"
+        - cell "127"
+        - 'cell "Found existing installation: nvidia-cudnn-cu12 9.19.0.56"'
+      - row "117.8s 128 Uninstalling nvidia-cudnn-cu12-9.19.0.56:":
+        - cell "117.8s"
+        - cell "128"
+        - cell "Uninstalling nvidia-cudnn-cu12-9.19.0.56:"
+      - 'row "118.0s 129 Attempting uninstall: nvidia-cudnn-cu12"':
+        - cell "118.0s"
+        - cell "129"
+        - 'cell "Attempting uninstall: nvidia-cudnn-cu12"'
+      - 'row "118.0s 130 Found existing installation: nvidia-cudnn-cu12 9.19.0.56"':
+        - cell "118.0s"
+        - cell "130"
+        - 'cell "Found existing installation: nvidia-cudnn-cu12 9.19.0.56"'
+      - row "118.0s 131 Uninstalling nvidia-cudnn-cu12-9.19.0.56:":
+        - cell "118.0s"
+        - cell "131"
+        - cell "Uninstalling nvidia-cudnn-cu12-9.19.0.56:"
+      - row "121.7s 132 Successfully uninstalled nvidia-cudnn-cu12-9.19.0.56":
+        - cell "121.7s"
+        - cell "132"
+        - cell "Successfully uninstalled nvidia-cudnn-cu12-9.19.0.56"
+      - row "121.9s 133 Successfully uninstalled nvidia-cudnn-cu12-9.19.0.56":
+        - cell "121.9s"
+        - cell "133"
+        - cell "Successfully uninstalled nvidia-cudnn-cu12-9.19.0.56"
+      - row "133.1s 134":
+        - cell "133.1s"
+        - cell "134"
+        - cell
+      - row "133.2s 135 Successfully installed nvidia-cudnn-cu12-9.10.2.21 nvidia-nccl-cu12-2.27.5":
+        - cell "133.2s"
+        - cell "135"
+        - cell "Successfully installed nvidia-cudnn-cu12-9.10.2.21 nvidia-nccl-cu12-2.27.5"
+      - row "133.3s 136":
+        - cell "133.3s"
+        - cell "136"
+        - cell
+      - row "133.3s 137 Successfully installed nvidia-cudnn-cu12-9.10.2.21 nvidia-nccl-cu12-2.27.5":
+        - cell "133.3s"
+        - cell "137"
+        - cell "Successfully installed nvidia-cudnn-cu12-9.10.2.21 nvidia-nccl-cu12-2.27.5"
+      - row "133.7s 138 Processing ./torch-2.10.0+cu128-cp313-cp313-manylinux_2_28_x86_64.whl":
+        - cell "133.7s"
+        - cell "138"
+        - cell "Processing ./torch-2.10.0+cu128-cp313-cp313-manylinux_2_28_x86_64.whl"
+      - row "133.9s 139 Processing ./torch-2.10.0+cu128-cp313-cp313-manylinux_2_28_x86_64.whl":
+        - cell "133.9s"
+        - cell "139"
+        - cell "Processing ./torch-2.10.0+cu128-cp313-cp313-manylinux_2_28_x86_64.whl"
+      - 'row "136.3s 140 Installing collected packages: torch"':
+        - cell "136.3s"
+        - cell "140"
+        - 'cell "Installing collected packages: torch"'
+      - 'row "136.3s 141 Attempting uninstall: torch"':
+        - cell "136.3s"
+        - cell "141"
+        - 'cell "Attempting uninstall: torch"'
+      - 'row "136.4s 142 Found existing installation: torch 2.11.0+cu128"':
+        - cell "136.4s"
+        - cell "142"
+        - 'cell "Found existing installation: torch 2.11.0+cu128"'
+      - 'row "136.5s 143 Installing collected packages: torch"':
+        - cell "136.5s"
+        - cell "143"
+        - 'cell "Installing collected packages: torch"'
+      - 'row "136.5s 144 Attempting uninstall: torch"':
+        - cell "136.5s"
+        - cell "144"
+        - 'cell "Attempting uninstall: torch"'
+      - 'row "136.5s 145 Found existing installation: torch 2.11.0+cu128"':
+        - cell "136.5s"
+        - cell "145"
+        - 'cell "Found existing installation: torch 2.11.0+cu128"'
+      - row "137.0s 146 Uninstalling torch-2.11.0+cu128:":
+        - cell "137.0s"
+        - cell "146"
+        - cell "Uninstalling torch-2.11.0+cu128:"
+      - row "137.2s 147 Uninstalling torch-2.11.0+cu128:":
+        - cell "137.2s"
+        - cell "147"
+        - cell "Uninstalling torch-2.11.0+cu128:"
+      - row "155.3s 148 Successfully uninstalled torch-2.11.0+cu128":
+        - cell "155.3s"
+        - cell "148"
+        - cell "Successfully uninstalled torch-2.11.0+cu128"
+      - row "155.5s 149 Successfully uninstalled torch-2.11.0+cu128":
+        - cell "155.5s"
+        - cell "149"
+        - cell "Successfully uninstalled torch-2.11.0+cu128"
+      - row "180.5s 150 Successfully installed torch-2.10.0+cu128":
+        - cell "180.5s"
+        - cell "150"
+        - cell "Successfully installed torch-2.10.0+cu128"
+      - row "180.7s 151 Successfully installed torch-2.10.0+cu128":
+        - cell "180.7s"
+        - cell "151"
+        - cell "Successfully installed torch-2.10.0+cu128"
+      - 'row "184.0s 152 installed torch: 2.10.0+cu128"':
+        - cell "184.0s"
+        - cell "152"
+        - 'cell "installed torch: 2.10.0+cu128"'
+      - 'row "184.0s 153 installed cuda: 12.8"':
+        - cell "184.0s"
+        - cell "153"
+        - 'cell "installed cuda: 12.8"'
+      - 'row "184.0s 154 installed cuda available: True"':
+        - cell "184.0s"
+        - cell "154"
+        - 'cell "installed cuda available: True"'
+      - 'row "184.2s 155 installed torch: 2.10.0+cu128"':
+        - cell "184.2s"
+        - cell "155"
+        - 'cell "installed torch: 2.10.0+cu128"'
+      - 'row "184.2s 156 installed cuda: 12.8"':
+        - cell "184.2s"
+        - cell "156"
+        - 'cell "installed cuda: 12.8"'
+      - 'row "184.2s 157 installed cuda available: True"':
+        - cell "184.2s"
+        - cell "157"
+        - 'cell "installed cuda available: True"'
+      - 'row "186.4s 158 repository: /kaggle/working/brain-stroke-e3-cdc6ad9b14ae"':
+        - cell "186.4s"
+        - cell "158"
+        - 'cell "repository: /kaggle/working/brain-stroke-e3-cdc6ad9b14ae"'
+      - 'row "186.4s 159 dataset: /kaggle/input/datasets/ozguraslank/brain-stroke-ct-dataset/Brain_Stroke_CT_Dataset"':
+        - cell "186.4s"
+        - cell "159"
+        - 'cell "dataset: /kaggle/input/datasets/ozguraslank/brain-stroke-ct-dataset/Brain_Stroke_CT_Dataset"'
+      - 'row "186.4s 160 config: configs/experiments/E3_focal_tversky_batch.yaml"':
+        - cell "186.4s"
+        - cell "160"
+        - 'cell "config: configs/experiments/E3_focal_tversky_batch.yaml"'
+      - 'row "186.4s 161 python: 3.13.15 (main, Aug 6 2026, 11:06:22) [GCC 13.3.0]"':
+        - cell "186.4s"
+        - cell "161"
+        - 'cell "python: 3.13.15 (main, Aug 6 2026, 11:06:22) [GCC 13.3.0]"'
+      - 'row "187.9s 162 Baseline torch 2.10.0+cu128 + CUDA: PASS"':
+        - cell "187.9s"
+        - cell "162"
+        - 'cell "Baseline torch 2.10.0+cu128 + CUDA: PASS"'
+      - 'row "188.1s 163 Baseline torch 2.10.0+cu128 + CUDA: PASS"':
+        - cell "188.1s"
+        - cell "163"
+        - 'cell "Baseline torch 2.10.0+cu128 + CUDA: PASS"'
+      - row "193.5s 164 test_overlay_colors (test_core.MaskTest.test_overlay_colors) ... ok":
+        - cell "193.5s"
+        - cell "164"
+        - cell "test_overlay_colors (test_core.MaskTest.test_overlay_colors) ... ok"
+      - row "193.5s 165 test_binary_metrics (test_core.MetricsTest.test_binary_metrics) ... ok":
+        - cell "193.5s"
+        - cell "165"
+        - cell "test_binary_metrics (test_core.MetricsTest.test_binary_metrics) ... ok"
+      - row "193.5s 166 test_detection_metrics (test_core.MetricsTest.test_detection_metrics) ... ok":
+        - cell "193.5s"
+        - cell "166"
+        - cell "test_detection_metrics (test_core.MetricsTest.test_detection_metrics) ... ok"
+      - row "193.5s 167 test_provisional_split_coverage (test_core.SplitTest.test_provisional_split_coverage) ... ok":
+        - cell "193.5s"
+        - cell "167"
+        - cell "test_provisional_split_coverage (test_core.SplitTest.test_provisional_split_coverage) ... ok"
+      - row "193.5s 168 test_baseline_uses_builtin_modules (test_factories.BaselineConfigTest.test_baseline_uses_builtin_modules) ... ok":
+        - cell "193.5s"
+        - cell "168"
+        - cell "test_baseline_uses_builtin_modules (test_factories.BaselineConfigTest.test_baseline_uses_builtin_modules) ... ok"
+      - row "193.5s 169 test_custom_loss_class_path (test_factories.LossFactoryTest.test_custom_loss_class_path) ... ok":
+        - cell "193.5s"
+        - cell "169"
+        - cell "test_custom_loss_class_path (test_factories.LossFactoryTest.test_custom_loss_class_path) ... ok"
+      - row "193.5s 170 test_dice_bce (test_factories.LossFactoryTest.test_dice_bce) ... ok":
+        - cell "193.5s"
+        - cell "170"
+        - cell "test_dice_bce (test_factories.LossFactoryTest.test_dice_bce) ... ok"
+      - row "193.5s 171 test_unknown_loss_is_rejected (test_factories.LossFactoryTest.test_unknown_loss_is_rejected) ... ok":
+        - cell "193.5s"
+        - cell "171"
+        - cell "test_unknown_loss_is_rejected (test_factories.LossFactoryTest.test_unknown_loss_is_rejected) ... ok"
+      - row "193.5s 172 test_custom_model_class_path (test_factories.ModelFactoryTest.test_custom_model_class_path) ... ok":
+        - cell "193.5s"
+        - cell "172"
+        - cell "test_custom_model_class_path (test_factories.ModelFactoryTest.test_custom_model_class_path) ... ok"
+      - row "193.5s 173 test_custom_unet_accepts_320_input (test_factories.ModelFactoryTest.test_custom_unet_accepts_320_input) ... ok":
+        - cell "193.5s"
+        - cell "173"
+        - cell "test_custom_unet_accepts_320_input (test_factories.ModelFactoryTest.test_custom_unet_accepts_320_input) ... ok"
+      - row "193.5s 174 test_unknown_model_is_rejected (test_factories.ModelFactoryTest.test_unknown_model_is_rejected) ... ok":
+        - cell "193.5s"
+        - cell "174"
+        - cell "test_unknown_model_is_rejected (test_factories.ModelFactoryTest.test_unknown_model_is_rejected) ... ok"
+      - row "193.5s 175 test_batch_gradient_with_empty_and_small_lesion_images (test_focal_tversky.FocalTverskyTest.test_batch_gradient_with_empty_and_small_lesion_images) ... ok":
+        - cell "193.5s"
+        - cell "175"
+        - cell "test_batch_gradient_with_empty_and_small_lesion_images (test_focal_tversky.FocalTverskyTest.test_batch_gradient_with_empty_and_small_lesion_images) ... ok"
+      - row "193.5s 176 test_batch_hand_calculation_and_factory (test_focal_tversky.FocalTverskyTest.test_batch_hand_calculation_and_factory) ... ok":
+        - cell "193.5s"
+        - cell "176"
+        - cell "test_batch_hand_calculation_and_factory (test_focal_tversky.FocalTverskyTest.test_batch_hand_calculation_and_factory) ... ok"
+      - row "193.5s 177 test_batch_numerical_gradient_and_single_image (test_focal_tversky.FocalTverskyTest.test_batch_numerical_gradient_and_single_image) ... ok":
+        - cell "193.5s"
+        - cell "177"
+        - cell "test_batch_numerical_gradient_and_single_image (test_focal_tversky.FocalTverskyTest.test_batch_numerical_gradient_and_single_image) ... ok"
+      - row "193.5s 178 test_false_negatives_have_greater_penalty (test_focal_tversky.FocalTverskyTest.test_false_negatives_have_greater_penalty) ... ok":
+        - cell "193.5s"
+        - cell "178"
+        - cell "test_false_negatives_have_greater_penalty (test_focal_tversky.FocalTverskyTest.test_false_negatives_have_greater_penalty) ... ok"
+      - row "193.5s 179 test_hand_calculated_value (test_focal_tversky.FocalTverskyTest.test_hand_calculated_value) ... ok":
+        - cell "193.5s"
+        - cell "179"
+        - cell "test_hand_calculated_value (test_focal_tversky.FocalTverskyTest.test_hand_calculated_value) ... ok"
+      - row "193.5s 180 test_invalid_shape_and_parameters (test_focal_tversky.FocalTverskyTest.test_invalid_shape_and_parameters) ... ok":
+        - cell "193.5s"
+        - cell "180"
+        - cell "test_invalid_shape_and_parameters (test_focal_tversky.FocalTverskyTest.test_invalid_shape_and_parameters) ... ok"
+      - row "193.5s 181 test_mixed_batch_half_precision_at_training_resolution (test_focal_tversky.FocalTverskyTest.test_mixed_batch_half_precision_at_training_resolution) ... ok":
+        - cell "193.5s"
+        - cell "181"
+        - cell "test_mixed_batch_half_precision_at_training_resolution (test_focal_tversky.FocalTverskyTest.test_mixed_batch_half_precision_at_training_resolution) ... ok"
+      - row "193.5s 182 test_new_factory_interface (test_focal_tversky.FocalTverskyTest.test_new_factory_interface) ... ok":
+        - cell "193.5s"
+        - cell "182"
+        - cell "test_new_factory_interface (test_focal_tversky.FocalTverskyTest.test_new_factory_interface) ... ok"
+      - row "193.5s 183 test_normal_case_gradient_suppresses_false_positives (test_focal_tversky.FocalTverskyTest.test_normal_case_gradient_suppresses_false_positives) ... ok":
+        - cell "193.5s"
+        - cell "183"
+        - cell "test_normal_case_gradient_suppresses_false_positives (test_focal_tversky.FocalTverskyTest.test_normal_case_gradient_suppresses_false_positives) ... ok"
+      - row "193.5s 184 test_numerical_gradient (test_focal_tversky.FocalTverskyTest.test_numerical_gradient) ... ok":
+        - cell "193.5s"
+        - cell "184"
+        - cell "test_numerical_gradient (test_focal_tversky.FocalTverskyTest.test_numerical_gradient) ... ok"
+      - row "193.5s 185 test_per_image_reduction (test_focal_tversky.FocalTverskyTest.test_per_image_reduction) ... ok":
+        - cell "193.5s"
+        - cell "185"
+        - cell "test_per_image_reduction (test_focal_tversky.FocalTverskyTest.test_per_image_reduction) ... ok"
+      - row "193.5s 186 test_saturated_predictions_have_finite_gradients (test_focal_tversky.FocalTverskyTest.test_saturated_predictions_have_finite_gradients) ... ok":
+        - cell "193.5s"
+        - cell "186"
+        - cell "test_saturated_predictions_have_finite_gradients (test_focal_tversky.FocalTverskyTest.test_saturated_predictions_have_finite_gradients) ... ok"
+      - row "193.5s 187":
+        - cell "193.5s"
+        - cell "187"
+        - cell
+      - row "193.5s 188 ----------------------------------------------------------------------":
+        - cell "193.5s"
+        - cell "188"
+        - cell "----------------------------------------------------------------------"
+      - row "193.5s 189 Ran 23 tests in 2.791s":
+        - cell "193.5s"
+        - cell "189"
+        - cell "Ran 23 tests in 2.791s"
+      - row "193.5s 190":
+        - cell "193.5s"
+        - cell "190"
+        - cell
+      - row "193.5s 191 OK":
+        - cell "193.5s"
+        - cell "191"
+        - cell "OK"
+      - row "193.5s 192":
+        - cell "193.5s"
+        - cell "192"
+        - cell
+      - 'row "198.8s 193 E3 factory + CUDA AMP backward: PASS; loss= 0.9961456656455994"':
+        - cell "198.8s"
+        - cell "193"
+        - 'cell "E3 factory + CUDA AMP backward: PASS; loss= 0.9961456656455994"'
+      - row "198.8s 194":
+        - cell "198.8s"
+        - cell "194"
+        - cell
+      - row "198.8s 195 验证通过。尚未正式训练；确认结果后再启用下一格。":
+        - cell "198.8s"
+        - cell "195"
+        - cell "验证通过。尚未正式训练；确认结果后再启用下一格。"
+      - row "207.6s 196 CHECKPOINT_EPOCH 11":
+        - cell "207.6s"
+        - cell "196"
+        - cell "CHECKPOINT_EPOCH 11"
+      - row "207.6s 197":
+        - cell "207.6s"
+        - cell "197"
+        - cell
+      - row "207.6s 198 Selected checkpoint verified; training is disabled.":
+        - cell "207.6s"
+        - cell "198"
+        - cell "Selected checkpoint verified; training is disabled."
+      - 'row "222.6s 199 # Experiment Result: E3_focal_tversky_batch"':
+        - cell "222.6s"
+        - cell "199"
+        - 'cell "# Experiment Result: E3_focal_tversky_batch"'
+      - row "222.6s 200":
+        - cell "222.6s"
+        - cell "200"
+        - cell
+      - 'row "222.6s 201 - Split: `baseline-v1-seed42` (frozen)"':
+        - cell "222.6s"
+        - cell "201"
+        - 'cell "- Split: `baseline-v1-seed42` (frozen)"'
+      - 'row "222.6s 202 - Checkpoint epoch: `11`"':
+        - cell "222.6s"
+        - cell "202"
+        - 'cell "- Checkpoint epoch: `11`"'
+      - 'row "222.6s 203 - Threshold: `0.5`"':
+        - cell "222.6s"
+        - cell "203"
+        - 'cell "- Threshold: `0.5`"'
+      - 'row "222.6s 204 - Internal positive-case Dice: `0.2868`"':
+        - cell "222.6s"
+        - cell "204"
+        - 'cell "- Internal positive-case Dice: `0.2868`"'
+      - 'row "222.6s 205 - Internal positive-case IoU: `0.2328`"':
+        - cell "222.6s"
+        - cell "205"
+        - 'cell "- Internal positive-case IoU: `0.2328`"'
+      - 'row "222.6s 206 - Internal Precision: `0.6290`"':
+        - cell "222.6s"
+        - cell "206"
+        - 'cell "- Internal Precision: `0.6290`"'
+      - 'row "222.6s 207 - Internal Recall: `0.2333`"':
+        - cell "222.6s"
+        - cell "207"
+        - 'cell "- Internal Recall: `0.2333`"'
+      - 'row "222.6s 208 - Internal Normal false-positive pixel ratio: `0.000112`"':
+        - cell "222.6s"
+        - cell "208"
+        - 'cell "- Internal Normal false-positive pixel ratio: `0.000112`"'
+      - 'row "222.6s 209 - External image-level F1: `0.6061`"':
+        - cell "222.6s"
+        - cell "209"
+        - 'cell "- External image-level F1: `0.6061`"'
+      - row "222.6s 210":
+        - cell "222.6s"
+        - cell "210"
+        - cell
+      - row "222.6s 211":
+        - cell "222.6s"
+        - cell "211"
+        - cell
+      - row "227.8s 212 External inference complete | images=200 | detection_f1=0.6061":
+        - cell "227.8s"
+        - cell "212"
+        - cell "External inference complete | images=200 | detection_f1=0.6061"
+      - row "227.8s 213":
+        - cell "227.8s"
+        - cell "213"
+        - cell
+      - row:
+        - cell "227.8s"
+        - cell "214"
+        - cell
+      - row "230.7s 215 结果包： /kaggle/working/brain-stroke-e3-cdc6ad9b14ae-results.zip":
+        - cell "230.7s"
+        - cell "215"
+        - cell "结果包： /kaggle/working/brain-stroke-e3-cdc6ad9b14ae-results.zip"
+      - row "230.7s 216 本格不会启动训练或评估。权重可保留在下载包中，但不要提交到 Git。":
+        - cell "230.7s"
+        - cell "216"
+        - cell "本格不会启动训练或评估。权重可保留在下载包中，但不要提交到 Git。"
+      - 'row "235.0s 217 /usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence ''\\|''"':
+        - cell "235.0s"
+        - cell "217"
+        - 'cell "/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence ''\\|''"'
+      - row "235.0s 218 cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)":
+        - cell "235.0s"
+        - cell "218"
+        - cell "cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)"
+      - 'row "235.2s 219 /usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence ''\\_''"':
+        - cell "235.2s"
+        - cell "219"
+        - 'cell "/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence ''\\_''"'
+      - 'row "235.2s 220 text = re.sub(r''_'', ''\\_'', text) # Escape underscores in display text"':
+        - cell "235.2s"
+        - cell "220"
+        - 'cell "text = re.sub(r''_'', ''\\_'', text) # Escape underscores in display text"'
+      - row "236.0s 221 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook":
+        - cell "236.0s"
+        - cell "221"
+        - cell "[NbConvertApp] Converting notebook __notebook__.ipynb to notebook"
+      - row "236.1s 222 [NbConvertApp] Writing 100765 bytes to __notebook__.ipynb":
+        - cell "236.1s"
+        - cell "222"
+        - cell "[NbConvertApp] Writing 100765 bytes to __notebook__.ipynb"
+      - row "238.5s 223 [NbConvertApp] Converting notebook __notebook__.ipynb to html":
+        - cell "238.5s"
+        - cell "223"
+        - cell "[NbConvertApp] Converting notebook __notebook__.ipynb to html"
+      - row "239.1s 224 [NbConvertApp] Writing 402351 bytes to __results__.html":
+        - cell "239.1s"
+        - cell "224"
+        - cell "[NbConvertApp] Writing 402351 bytes to __results__.html"
+- alert

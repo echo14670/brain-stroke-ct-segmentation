@@ -20,8 +20,8 @@ sys.path.insert(0, str(PROJECT_ROOT))
 from src.data import dataset_for_split, ensure_split  # noqa: E402
 from src.evaluation.engine import collect_case_metrics  # noqa: E402
 from src.evaluation.metrics import aggregate_case_metrics  # noqa: E402
-from src.losses import DiceBCELoss  # noqa: E402
-from src.models import UNet2D  # noqa: E402
+from src.losses import build_loss  # noqa: E402
+from src.models import build_model  # noqa: E402
 from src.utils import (  # noqa: E402
     load_config,
     resolve_data_root,
@@ -156,15 +156,8 @@ def train(
         shuffle=False,
     )
 
-    model = UNet2D(
-        in_channels=int(model_config["in_channels"]),
-        out_channels=int(model_config["out_channels"]),
-        base_channels=int(model_config["base_channels"]),
-    ).to(device)
-    criterion = DiceBCELoss(
-        bce_weight=float(loss_config["bce_weight"]),
-        dice_weight=float(loss_config["dice_weight"]),
-    )
+    model = build_model(model_config, pretrained=True).to(device)
+    criterion = build_loss(loss_config)
     optimizer = torch.optim.AdamW(
         model.parameters(),
         lr=float(train_config["learning_rate"]),
@@ -181,7 +174,9 @@ def train(
 
     parameter_count = sum(parameter.numel() for parameter in model.parameters())
     logger.log(
-        f"Baseline start | device={device} | image_size={image_size} | "
+        f"Experiment start | name={project['name']} | device={device} | "
+        f"image_size={image_size} | model={model_config.get('name', 'unet')} | "
+        f"loss={loss_config.get('name', 'dice_bce')} | "
         f"parameters={parameter_count:,}"
     )
     logger.log(

@@ -1,0 +1,36 @@
+{
+  "experiment": "E3 Focal Tversky Loss",
+  "status": "训练与评估已完成，代码和报告已整理；Git提交与推送状态以仓库为准",
+  "issue": "https://github.com/echo14670/brain-stroke-ct-segmentation/issues/3",
+  "branch": "exp/focal-tversky",
+  "selected_config": "configs/experiments/E3_focal_tversky_batch.yaml",
+  "selected_checkpoint_epoch": 11,
+  "checkpoint_sha256": "522b14b7f4e85fbc9f2907a8fa5b7ce0a6abd62244b6f221ff0392d252b3a0db",
+  "checkpoint_bytes": 31126405,
+  "checkpoint_delivery": "E3_final_evaluation_results.zip / reports/experiments/E3_focal_tversky_batch/best.pt",
+  "split_file_sha256": "4853e4fe55dac627ae4a5daba918aa00f46feb156932e909cbce5802742a7052",
+  "split_membership_sha256": "db54033f24204e97faae21e80e15c8104ecb783f9feab5b3c894debf6f62f58c",
+  "seed": 42,
+  "threshold": 0.5,
+  "runs": {
+    "first_training_version": 4,
+    "first_diagnosis_version": 5,
+    "selected_training_version": 6,
+    "final_evaluation_version": 7
+  },
+  "urls": {
+    "training": "https://www.kaggle.com/code/tw1l1ghtzzz/e3-focal-tversky?scriptVersionId=363329143",
+    "final_evaluation": "https://www.kaggle.com/code/tw1l1ghtzzz/e3-focal-tversky?scriptVersionId=363334429"
+  },
+  "checks": {
+    "cloud_tests": "23 PASS",
+    "cuda_amp": "PASS",
+    "zip_crc": "PASS",
+    "checkpoint_hash_and_epoch": "PASS"
+  },
+  "limitations": [
+    "一个固定种子",
+    "未单独测量推理延迟",
+    "未达到提升阳性Dice的目标"
+  ]
+}

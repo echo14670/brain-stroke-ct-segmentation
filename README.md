@@ -75,3 +75,30 @@ kaggle kernels output echo14aa/brain-stroke-baseline -p outputs/kaggle-baseline
 `baseline-v1` 已完成 Kaggle GPU 训练，定义为基础红色掩码、无数据增强、简单 2D U-Net、256×256、Dice+BCE、从零训练。结果和逐病例记录位于 `reports/experiments/baseline/`，模型权重通过 GitHub Release `baseline-v1` 交付。
 
 E1 数据质量修正、E2 预训练 ResNet34、E3 Focal Tversky Loss 和 E4 320×320 输入均可从 `baseline-v1` 并行开始；任何实验都不得覆盖该控制组结果。
+## 四分支实验入口
+
+四个实验共用同一套训练、评估和推理代码，通过配置切换：
+
+```powershell
+python scripts/train.py --config configs/experiments/E1_data_quality.yaml
+python scripts/train.py --config configs/experiments/E2_resnet34.yaml
+python scripts/train.py --config configs/experiments/E3_focal_tversky.yaml
+python scripts/train.py --config configs/experiments/E4_res320.yaml
+```
+
+模型由 `model.name` 选择，损失函数由 `loss.name` 选择。当前支持：
+
+- `model.name: unet`
+- `model.name: smp_unet`
+- `loss.name: dice_bce`
+- `loss.name: focal_tversky`
+
+E2 使用 `segmentation-models-pytorch` 和 ImageNet ResNet34，运行前必须确保该依赖及其预训练权重在目标环境中可用。评估和推理阶段不会重新下载预训练权重，只按配置创建相同模型并加载本地检查点。
+
+Kaggle Notebook 默认使用 `configs/baseline.yaml`。生成指定实验的 Notebook 时执行：
+
+```powershell
+python kaggle/build_notebook.py --config configs/experiments/E2_resnet34.yaml
+```
+
+也可以在本机运行时设置环境变量 `BSC_CONFIG` 覆盖 Notebook 内嵌配置。

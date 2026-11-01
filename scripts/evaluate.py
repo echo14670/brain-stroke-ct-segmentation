@@ -19,7 +19,7 @@ from src.evaluation.metrics import (  # noqa: E402
     group_case_metrics,
     detection_metrics,
 )
-from src.models import UNet2D  # noqa: E402
+from src.models import build_model  # noqa: E402
 from src.utils import (  # noqa: E402
     load_config,
     resolve_data_root,
@@ -85,11 +85,7 @@ def evaluate(config_path: Path, checkpoint_path: Path | None) -> dict[str, objec
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model_config = config["model"]
-    model = UNet2D(
-        in_channels=int(model_config["in_channels"]),
-        out_channels=int(model_config["out_channels"]),
-        base_channels=int(model_config["base_channels"]),
-    ).to(device)
+    model = build_model(model_config, pretrained=False).to(device)
     checkpoint = torch.load(
         checkpoint_path, map_location=device, weights_only=False
     )
@@ -164,10 +160,11 @@ def evaluate(config_path: Path, checkpoint_path: Path | None) -> dict[str, objec
 
     internal = metrics["internal_test"]["overall"]
     external_detection = metrics["external_test"]["image_detection"]
+    split_status = "provisional" if metrics["split_provisional"] else "frozen"
     summary = (
-        "# Baseline Result\n\n"
+        f"# Experiment Result: {config['project']['name']}\n\n"
         f"- Split: `{metrics['split_version']}` "
-        f"(provisional: `{metrics['split_provisional']}`)\n"
+        f"({split_status})\n"
         f"- Checkpoint epoch: `{metrics['checkpoint_epoch']}`\n"
         f"- Threshold: `{threshold}`\n"
         f"- Internal positive-case Dice: `{internal['positive_mean_dice']:.4f}`\n"
@@ -176,9 +173,7 @@ def evaluate(config_path: Path, checkpoint_path: Path | None) -> dict[str, objec
         f"- Internal Recall: `{internal['positive_pixel_recall']:.4f}`\n"
         "- Internal Normal false-positive pixel ratio: "
         f"`{internal['normal_false_positive_pixel_ratio']:.6f}`\n"
-        f"- External image-level F1: `{external_detection['f1']:.4f}`\n\n"
-        "This provisional report must be regenerated after the data owner "
-        "freezes `main_split.json` and the mask version used by the team.\n"
+        f"- External image-level F1: `{external_detection['f1']:.4f}`\n"
     )
     (output_dir / "summary.md").write_text(summary, encoding="utf-8")
     print(summary, flush=True)
