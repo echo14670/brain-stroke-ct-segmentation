@@ -1,0 +1,81 @@
+{
+  "status": "completed",
+  "best_validation_dice": 0.33994209957697,
+  "epochs_completed": 8,
+  "parameter_count": 7765409,
+  "elapsed_seconds": 995.6007702350616,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 1.212182562580633,
+      "validation_loss": 1.1105907001192608,
+      "validation_dice": 0.0,
+      "validation_iou": 0.0,
+      "learning_rate": 0.0003,
+      "epoch_seconds": 544.1063511371613
+    },
+    {
+      "epoch": 2,
+      "train_loss": 1.0325455697336556,
+      "validation_loss": 0.9812223040868365,
+      "validation_dice": 0.3136704045531417,
+      "validation_iou": 0.2596879375121641,
+      "learning_rate": 0.0003,
+      "epoch_seconds": 64.78400039672852
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.9637495416546196,
+      "validation_loss": 0.947787511443335,
+      "validation_dice": 0.30882356379485154,
+      "validation_iou": 0.2573831684173972,
+      "learning_rate": 0.0003,
+      "epoch_seconds": 64.27998089790344
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.9344369234498014,
+      "validation_loss": 0.922898263685287,
+      "validation_dice": 0.33994209957697,
+      "validation_iou": 0.2796171605290911,
+      "learning_rate": 0.0003,
+      "epoch_seconds": 64.3232216835022
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.8318251398523239,
+      "validation_loss": 0.40430826835689093,
+      "validation_dice": 0.22222882339382052,
+      "validation_iou": 0.17306476375631752,
+      "learning_rate": 0.0003,
+      "epoch_seconds": 64.38628840446472
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.4182660235908151,
+      "validation_loss": 0.4109930604814537,
+      "validation_dice": 0.0,
+      "validation_iou": 0.0,
+      "learning_rate": 0.0003,
+      "epoch_seconds": 63.9425835609436
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.41093997441110586,
+      "validation_loss": 0.4073725050344827,
+      "validation_dice": 0.0,
+      "validation_iou": 0.0,
+      "learning_rate": 0.00015,
+      "epoch_seconds": 64.07559776306152
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.386652234828106,
+      "validation_loss": 0.3288238403786506,
+      "validation_dice": 0.27256511447119386,
+      "validation_iou": 0.22730904004155014,
+      "learning_rate": 0.00015,
+      "epoch_seconds": 64.1029953956604
+    }
+  ]
+}
