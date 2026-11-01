@@ -1,0 +1,32 @@
+{
+  "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+  "platform": "Linux-6.18.55+-x86_64-with-glibc2.39",
+  "torch": "2.11.0+cu128",
+  "cuda": "12.8",
+  "gpu": "Tesla T4",
+  "gpu_count": 2,
+  "base_commit": "41772b68d0b661361c577794a5eb5fcdfa03f896",
+  "split_sha256": "4853e4fe55dac627ae4a5daba918aa00f46feb156932e909cbce5802742a7052",
+  "source_sha256": {
+    "configs/baseline.yaml": "9b03b54e1397ccb53175802d0c6b6ccc01ee4447f0f27b9b12e7c7bf576bc2cd",
+    "configs/experiments/E1_data_quality.yaml": "163c9180155a6acf503e4f5bb584b58ba369bfca10a1b16d14fae8577d18115d",
+    "data/splits/main_split.json": "4853e4fe55dac627ae4a5daba918aa00f46feb156932e909cbce5802742a7052",
+    "reports/experiments/baseline/metrics.json": "7429947855b75c69d97183bbf85a42fb48203485ccee127c426565c20e8cd442",
+    "scripts/evaluate.py": "944ef48ee6ef97584d1ec3d881f6b0ddac0bc4d058437c27fb1df1eed7a7e297",
+    "scripts/infer.py": "0e123d8908c24a116f8c86805736b585e89853e90cfe152d741bbbfd209d65b1",
+    "scripts/make_split.py": "495c285674d85488f0607a5656a224bbb2ba1c4c8cc993c8cd58c6d8d1224b72",
+    "scripts/train.py": "bb1edf0c59f0efd69d4e2f673fb347f48309d732f809ebfeba2c96a902cd6af9",
+    "src/__init__.py": "61465c987e3d060f9c4a53ae759ea01c9c152bed8f8f569d096245b6d18b895c",
+    "src/data/__init__.py": "1bd524432074d9982bc17a1cd3641ef2aa9b13608f1753c2e7821adf3464656e",
+    "src/data/audit_quality.py": "2130694d66301fb919b216690d81d925d6cb7eedf42553baa00bac77c9d2494b",
+    "src/data/dataset.py": "5ed25e620118262ced22cc96bed405589818405f9fa1377a27521a3276a7609a",
+    "src/evaluation/__init__.py": "e98895597f109a79b3f0a83a1765cede1b550ffec970b43fd58f49d340994731",
+    "src/evaluation/engine.py": "7a9efdeb0346501d6ad904e18f1c8e35dfc7326cbcabda26902fade54d4ba614",
+    "src/evaluation/metrics.py": "5942d2c1fa1d14891c4ea7039727106c691311ac0b70eed85c899e6e2ce36ebe",
+    "src/losses/__init__.py": "47d77f7a8c07939289a5d26911903fc5dc896ae3179d8f2c9e2658e505468764",
+    "src/losses/dice_bce.py": "e53f27d9381a1bce76a5fbc92f9fa804f14cc3136192b63d94a9d81c71cdfdbd",
+    "src/models/__init__.py": "7ce431081ba1bb7ec8a781a662c113906b0f28bfa167adcecbd7e92c36d72b4b",
+    "src/models/unet.py": "8b98cf3b3bf63aba2678b4e04834976589d124f66dacfa5b415a65fb9135d368",
+    "src/utils.py": "ed711a027bf4c569a13e0b0b64940aa70b33995397ba6e66785b4060fca2f7e2"
+  }
+}

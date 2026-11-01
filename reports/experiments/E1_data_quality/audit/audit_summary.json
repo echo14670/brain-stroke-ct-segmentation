@@ -1,0 +1,28 @@
+{
+  "split_version": "baseline-v1-seed42",
+  "split_provisional": false,
+  "split_sha256": "4853e4fe55dac627ae4a5daba918aa00f46feb156932e909cbce5802742a7052",
+  "split_counts": {
+    "train": 4654,
+    "validation": 998,
+    "test": 998,
+    "external_test": 200
+  },
+  "discovered": 6850,
+  "audited": 6850,
+  "read_errors": 0,
+  "main_non_512": 248,
+  "external_non_512": 8,
+  "external_non_square": 8,
+  "mask_size_mismatch": 0,
+  "main_positive_empty_red": 0,
+  "main_positive_empty_union": 0,
+  "blue_added_by_group": {
+    "Ischemia": 1130
+  },
+  "external_positive_empty_mask": 7,
+  "external_label_mask_conflict": 7,
+  "exact_duplicate_groups": 20,
+  "cross_split_duplicate_groups": 10,
+  "split_unchanged": true
+}

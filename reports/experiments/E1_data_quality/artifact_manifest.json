@@ -1,0 +1,54 @@
+{
+  "best.pt": {
+    "bytes": 31126149,
+    "sha256": "86072a50d9452ebaec2a5bd6348cc624d00731c355e277deada701b01c02049c"
+  },
+  "config.yaml": {
+    "bytes": 756,
+    "sha256": "163c9180155a6acf503e4f5bb584b58ba369bfca10a1b16d14fae8577d18115d"
+  },
+  "metrics.json": {
+    "bytes": 3054,
+    "sha256": "8c3534bc6054d616895d0e2ccfb35d51ad32c824452d303a59e46240c0de4a83"
+  },
+  "run.log": {
+    "bytes": 8954,
+    "sha256": "7fa88c17662e299a6beadddf1b6e330235a22386ae5d435621a3f4212490ceb5"
+  },
+  "curves.png": {
+    "bytes": 77493,
+    "sha256": "3b6df55fb5e1764e19c219e0ed990ebfd4a38a97d2249f2c398630b309e27f45"
+  },
+  "train_summary.json": {
+    "bytes": 2312,
+    "sha256": "0d8bbe548fd8a14fb8bbf3d4bee3056d54371ba9b5c95cb0be05a403a877bcee"
+  },
+  "environment.json": {
+    "bytes": 2349,
+    "sha256": "9dae77d3fd181f499f944756883f1e6bea3aaf84dccacdbb4a6e433e628f721d"
+  },
+  "test_per_case.csv": {
+    "bytes": 69763,
+    "sha256": "e191393c8f3f21200c75f2f439e7778cceebc66260f41e2d50de20618f0e1d0f"
+  },
+  "external_test_per_case.csv": {
+    "bytes": 15521,
+    "sha256": "fdde2dbdf8f53b29c6a4e1066edd8152fb6218e90fec42a9309b2f63608a0262"
+  },
+  "samples.png": {
+    "bytes": 594526,
+    "sha256": "e88252d1d1966af2547a51597c6f8d26093ca1a371f9d2e45f0b512604dc8ae3"
+  },
+  "summary.md": {
+    "bytes": 5513,
+    "sha256": "0137939e4239fb5b04c91883a2dc9d70354903cd3a8b0e9d80ac3cc79a5e6bcd"
+  },
+  "comparison.csv": {
+    "bytes": 855,
+    "sha256": "10bd15da0995315d75d9603d8350a97068625de6efbe185775ff550a0c1d68bb"
+  },
+  "selected_samples.csv": {
+    "bytes": 870,
+    "sha256": "655b4dbb2753a6a43604775eca90c11f0d59e82f5bc3d1b2ad7a34110903ac9a"
+  }
+}
