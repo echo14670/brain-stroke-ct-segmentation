@@ -102,3 +102,30 @@ python kaggle/build_notebook.py --config configs/experiments/E2_resnet34.yaml
 ```
 
 也可以在本机运行时设置环境变量 `BSC_CONFIG` 覆盖 Notebook 内嵌配置。
+
+## 组合与公开 U-Net++ 实验
+
+E5-E7 是在正式单变量实验之后补充的组合与公开方案复现实验：
+
+- E5：在 E4 的 320×320 上直接使用 Focal Tversky Loss，结果见
+  `reports/experiments/E5_res320_focal_tversky/`。
+- E6：把公开 U-Net++ 的输入从 256×256 提高到 320×320，结果见
+  `reports/experiments/E6_public_unetpp_320/`。
+- E7：在 E6 上增加权重为 0.2 的辅助 Focal Tversky，结果见
+  `reports/experiments/E7_public_unetpp_320_aux_focal/`。
+
+E5 可复用统一训练入口：
+
+```powershell
+python scripts/train.py --config configs/experiments/E5_res320_focal_tversky.yaml
+```
+
+E6 和 E7 使用独立的公开 Notebook 派生版本。生成与上传命令：
+
+```powershell
+python kaggle/build_e6_public_320.py --source <公开Notebook路径>
+kaggle kernels push -p kaggle/E6_public_unetpp_320
+
+python kaggle/build_e7_public_aux_focal.py
+kaggle kernels push -p kaggle/E7_public_unetpp_320_aux_focal
+```
