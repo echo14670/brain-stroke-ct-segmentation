@@ -1,0 +1,19 @@
+{
+  "id": "echo14aa/brain-stroke-e5-res320-focal-tversky",
+  "title": "脑卒中 CT E5 320x320 与 Focal Tversky 组合实验",
+  "code_file": "E5_res320_focal_tversky_full.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "machine_shape": "NvidiaTeslaT4",
+  "dataset_sources": [
+    "ozguraslank/brain-stroke-ct-dataset",
+    "amitmalakarjoy/torch-2100-cu128",
+    "koumeimaki/vllm019-cp311-cu128-wheelhouse"
+  ],
+  "competition_sources": [],
+  "kernel_sources": []
+}

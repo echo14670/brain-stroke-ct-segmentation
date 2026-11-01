@@ -1,0 +1,56 @@
+{
+  "experiment": "E6_public_unetpp_320",
+  "source": "https://www.kaggle.com/code/echo14aa/ct-e6-u-net-320",
+  "input_size": 320,
+  "loss": {
+    "name": "dice_bce",
+    "dice_weight": 0.5,
+    "bce_weight": 0.5
+  },
+  "test_split": {
+    "seed": 42,
+    "case_count": 998,
+    "category_counts": {
+      "Normal": 664,
+      "Ischemia": 180,
+      "Bleeding": 154
+    }
+  },
+  "checkpoint_epoch": 42,
+  "best_validation_dice": 0.8636,
+  "validation_last": {
+    "epoch": 50,
+    "train_loss": 0.2568,
+    "train_dice": 0.7575,
+    "train_iou": 0.7354,
+    "train_precision": 0.8833,
+    "train_recall": 0.8193,
+    "train_f1": 0.7575,
+    "validation_loss": 0.1697,
+    "validation_dice": 0.8562,
+    "validation_iou": 0.8233,
+    "validation_precision": 0.8904,
+    "validation_recall": 0.9039,
+    "validation_f1": 0.8562
+  },
+  "test_all_image": {
+    "pixel_accuracy": 0.9948,
+    "dice": 0.8466,
+    "iou": 0.8162,
+    "precision": 0.9144,
+    "recall": 0.8765,
+    "f1": 0.8466
+  },
+  "test_positive_cases": {
+    "dice": 0.8378,
+    "precision": 0.9094,
+    "recall": 0.8694
+  },
+  "pixel_confusion": {
+    "total_pixels": 102195200,
+    "true_negative": 101024523,
+    "false_positive": 237193,
+    "false_negative": 289179,
+    "true_positive": 644305
+  }
+}

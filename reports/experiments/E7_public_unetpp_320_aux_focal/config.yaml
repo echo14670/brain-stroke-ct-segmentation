@@ -1,0 +1,20 @@
+input_size: 320
+model:
+  name: smp_unetpp
+  encoder_name: efficientnet-b0
+  encoder_weights: imagenet
+  in_channels: 3
+data:
+  split: public_random_seed42
+  augmentation: true
+train:
+  batch_size: 8
+  epochs: 50
+  optimizer: AdamW
+  learning_rate: 0.0001
+  scheduler: cosine_annealing
+loss:
+  name: dice_bce_aux_focal_tversky
+  dice_weight: 0.5
+  bce_weight: 0.5
+  focal_weight: 0.2

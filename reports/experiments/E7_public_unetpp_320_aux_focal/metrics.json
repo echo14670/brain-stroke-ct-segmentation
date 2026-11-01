@@ -1,0 +1,57 @@
+{
+  "experiment": "E7_public_unetpp_320_aux_focal",
+  "source": "https://www.kaggle.com/code/echo14aa/ct-e7-u-net-320-focal",
+  "input_size": 320,
+  "loss": {
+    "name": "dice_bce_aux_focal_tversky",
+    "dice_weight": 0.5,
+    "bce_weight": 0.5,
+    "focal_weight": 0.2
+  },
+  "test_split": {
+    "seed": 42,
+    "case_count": 998,
+    "category_counts": {
+      "Normal": 664,
+      "Ischemia": 180,
+      "Bleeding": 154
+    }
+  },
+  "checkpoint_epoch": 40,
+  "best_validation_dice": 0.8587,
+  "validation_last": {
+    "epoch": 50,
+    "train_loss": 0.3201,
+    "train_dice": 0.7477,
+    "train_iou": 0.7243,
+    "train_precision": 0.8566,
+    "train_recall": 0.8291,
+    "train_f1": 0.7477,
+    "validation_loss": 0.2196,
+    "validation_dice": 0.8563,
+    "validation_iou": 0.8248,
+    "validation_precision": 0.8937,
+    "validation_recall": 0.8974,
+    "validation_f1": 0.8563
+  },
+  "test_all_image": {
+    "pixel_accuracy": 0.9944,
+    "dice": 0.8523,
+    "iou": 0.8197,
+    "precision": 0.8974,
+    "recall": 0.886,
+    "f1": 0.8523
+  },
+  "test_positive_cases": {
+    "dice": 0.8449,
+    "precision": 0.8925,
+    "recall": 0.8795
+  },
+  "pixel_confusion": {
+    "total_pixels": 102195200,
+    "true_negative": 100963630,
+    "false_positive": 298086,
+    "false_negative": 269567,
+    "true_positive": 663917
+  }
+}

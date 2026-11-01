@@ -1,0 +1,17 @@
+{
+  "id": "echo14aa/brain-stroke-e7-public-unetpp-320-aux-focal",
+  "title": "脑卒中 CT E7 公开 U-Net++ 320 辅助 Focal",
+  "code_file": "E7_public_unetpp_320_aux_focal.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "machine_shape": "NvidiaTeslaT4",
+  "dataset_sources": [
+    "ozguraslank/brain-stroke-ct-dataset"
+  ],
+  "competition_sources": [],
+  "kernel_sources": []
+}

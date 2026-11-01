@@ -1,0 +1,17 @@
+{
+  "id": "echo14aa/brain-stroke-e6-public-unetpp-320",
+  "title": "脑卒中 CT E6 公开 U-Net++ 320",
+  "code_file": "E6_public_unetpp_320.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "machine_shape": "NvidiaTeslaT4",
+  "dataset_sources": [
+    "ozguraslank/brain-stroke-ct-dataset"
+  ],
+  "competition_sources": [],
+  "kernel_sources": []
+}
