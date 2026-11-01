@@ -1,0 +1,8 @@
+单变量校验通过：仅 image_size 256 -> 320
+GPU: Tesla T4 14.6 GiB
+切分: baseline-v1-seed42 {'train': 4654, 'validation': 998, 'test': 998, 'external_test': 200}
+数据样本: 10002 (1, 320, 320) | 掩码与图像同步缩放
+训练步通过 | batch=8 @320x320 | loss= 1.6494760513305664
+训练峰值显存 allocated=1.20 GiB reserved=1.62 GiB / total=14.56 GiB
+评估推理通过 | batch=16 @320x320 | 峰值 allocated=1.07 GiB
+显存余量检查通过，可以启动正式训练。
