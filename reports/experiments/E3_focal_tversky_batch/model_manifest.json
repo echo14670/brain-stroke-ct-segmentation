@@ -1,0 +1,13 @@
+{
+  "experiment": "E3_focal_tversky_batch",
+  "checkpoint": "best.pt",
+  "epoch": 11,
+  "bytes": 31126405,
+  "sha256": "522b14b7f4e85fbc9f2907a8fa5b7ce0a6abd62244b6f221ff0392d252b3a0db",
+  "config": "configs/experiments/E3_focal_tversky_batch.yaml",
+  "selected_using": "validation positive-case Dice",
+  "best_validation_dice": 0.32277152271099857,
+  "source_code_pr": "https://github.com/echo14670/brain-stroke-ct-segmentation/pull/4",
+  "release": "https://github.com/tw1l1ghtcc/brain-stroke-ct-segmentation/releases/tag/e3-focal-tversky-v1",
+  "delivery_note": "按模型所有者本次明确要求直接提交该最佳权重；保留现有Release交付。"
+}
