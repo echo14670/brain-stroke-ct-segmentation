@@ -7,7 +7,7 @@
   "selected_checkpoint_epoch": 11,
   "checkpoint_sha256": "522b14b7f4e85fbc9f2907a8fa5b7ce0a6abd62244b6f221ff0392d252b3a0db",
   "checkpoint_bytes": 31126405,
-  "checkpoint_delivery": "E3_final_evaluation_results.zip / reports/experiments/E3_focal_tversky_batch/best.pt",
+  "checkpoint_delivery": "reports/experiments/E3_focal_tversky_batch/best.pt",
   "split_file_sha256": "4853e4fe55dac627ae4a5daba918aa00f46feb156932e909cbce5802742a7052",
   "split_membership_sha256": "db54033f24204e97faae21e80e15c8104ecb783f9feab5b3c894debf6f62f58c",
   "seed": 42,
@@ -32,5 +32,6 @@
     "一个固定种子",
     "未单独测量推理延迟",
     "未达到提升阳性Dice的目标"
-  ]
+  ],
+  "checkpoint_release": "https://github.com/tw1l1ghtcc/brain-stroke-ct-segmentation/releases/tag/e3-focal-tversky-v1"
 }

@@ -34,11 +34,15 @@ Kaggle训练使用`kaggle/E3_focal_tversky_batch_train.ipynb`。仅最终评估�
 
 ## 模型和预测交付
 
-权重和200张外部预测图片均保留在本地最终评估ZIP内，不加入Git。结果包中的路径为：
+E3代码与实验报告已通过主仓库PR #4合并。本次按模型所有者明确要求，补交最终选择的第11轮权重，直接保存到配置默认读取的位置：
 
 ```text
 reports/experiments/E3_focal_tversky_batch/best.pt
-reports/experiments/E3_focal_tversky_batch/predictions/external/
+reports/experiments/E3_focal_tversky_batch/model_manifest.json
 ```
 
-将来创建PR时关联上游Issue #3，由其他成员评审。代码和报告通过个人fork的exp/focal-tversky分支交付；PR尚未创建，权重尚未上传到Release或共享盘。
+权重为31,126,405字节，SHA256为`522b14b7f4e85fbc9f2907a8fa5b7ce0a6abd62244b6f221ff0392d252b3a0db`。校验信息、选择依据及配置路径保存在model_manifest.json中。该路径可直接用于上面的evaluate.py和infer.py命令，不需要重新训练。
+
+原有[实验Release](https://github.com/tw1l1ghtcc/brain-stroke-ct-segmentation/releases/tag/e3-focal-tversky-v1)继续提供best.pt、结果报告ZIP及校验文件，200张外部预测掩码位于Release中的E3_evaluation_reports.zip内。本次没有重新训练、修改参数或更新实验指标。
+
+本次权重直接进入Git是模型所有者针对该文件的交付要求；其他模型、数据集及训练缓存仍遵循团队既有交付约定。
